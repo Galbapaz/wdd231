@@ -1,100 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 231 course home page for Gabriel Alba.">
-  <meta name="author" content="Gabriel Alba">
+    <meta charset="UTF-8">
 
-  <title>WDD 231 - Course Home Page - Gabriel Alba</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+    <meta name="description"
+          content="WDD 231 course home page for Gabriel Alba.">
 
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/courses.js" defer></script>
+    <meta name="author"
+          content="Gabriel Alba">
+
+    <title>WDD 231 - Gabriel Alba</title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link rel="stylesheet"
+          href="styles/normalize.css">
+
+    <link rel="stylesheet"
+          href="styles/small.css">
+
+    <link rel="stylesheet"
+          href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+
+    <script src="scripts/date.js" defer></script>
+
+    <script src="scripts/courses.js" defer></script>
+
 </head>
 
 <body>
-  <header>
-    <div class="site-branding">
-      <img src="images/logo.svg" alt="Site logo" width="50" height="50">
-      <span>Site Name</span>
-    </div>
 
-    <button id="menuButton" aria-label="Open navigation menu"></button>
-  </header>
 
-  <nav id="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Chamber Project</a></li>
-      <li><a href="#">Final Project</a></li>
-    </ul>
-  </nav>
+    <header>
 
-  <main>
-    <h1>Home</h1>
+        <div class="site-branding">
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        My name is Gabriel Alba. I am from Santa Cruz, Bolivia. I am studying
-        software development and learning how to create responsive websites
-        using HTML, CSS, and JavaScript. I enjoy teaching English and improving
-        my technology skills.
-      </p>
-    </section>
+            <img src="images/logo.svg"
+                 alt="Site Logo"
+                 width="50"
+                 height="50">
 
-    <section class="photo">
-      <h2>Student Photo</h2>
-      <img src="images/student-photo.jpg" alt="Photo of Gabriel Alba" width="300" height="300">
-    </section>
+            <span>Gabriel Alba</span>
 
-    <section class="courses">
-      <h2>Web Certificate Courses</h2>
+        </div>
 
-      <div class="course-buttons">
-        <button>All</button>
-        <button>CSE</button>
-        <button>WDD</button>
-      </div>
+        <button id="menuButton"
+                aria-label="Open navigation menu"></button>
 
-      <div id="courseContainer">
-        <p>WDD 130</p>
-        <p>WDD 131</p>
-        <p>WDD 231</p>
-      </div>
+    </header>
 
-      <p>
-        The total credits for course listed above is 
-        <span id="totalCredits">6</span>
-      </p>
-    </section>
-  </main>
+  
 
-  <footer>
-    <div class="social">
-      <a href="https://www.linkedin.com/" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn icon">
-      </a>
+    <nav id="navigation">
 
-      <a href="https://github.com/Galbapaz" target="_blank">
-        <img src="images/github.png" alt="GitHub icon">
-      </a>
+        <ul>
 
-      <a href="#" target="_blank">
-        <img src="images/x.avif" alt="X social media icon">
-      </a>
-    </div>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-    <p>
-      &copy; <span id="currentyear"></span> • Gabriel Alba • Bolivia
-    </p>
+            <li>
+                <a href="#">Chamber Project</a>
+            </li>
 
-    <p id="lastModified"></p>
-  </footer>
+            <li>
+                <a href="#">Final Project</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+  
+
+    <main>
+
+        <h1>Home</h1>
+
+       
+
+        <div class="top-sections">
+
+           
+
+            <section class="about">
+
+                <h2>About Me</h2>
+
+                <p>
+                    My name is Gabriel Alba. I am from Santa Cruz, Bolivia.
+                    I am studying software development and learning how to
+                    create responsive websites using HTML, CSS, and JavaScript.
+                    I enjoy teaching English and improving my technology skills.
+                </p>
+
+            </section>
+
+           
+
+            <section class="photo">
+
+                <h2>Student Photo</h2>
+
+                <img src="images/student-photo.jpg"
+                     alt="Photo of Gabriel Alba">
+
+            </section>
+
+        </div>
+
+       
+
+        <section class="courses">
+
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-buttons">
+
+              <button id="allButton">All</button>
+
+              <button id="cseButton">CSE</button>
+
+              <button id="wddButton">WDD</button>
+
+            </div>
+
+            <div id="courseContainer">
+
+                <p>WDD 130</p>
+
+                <p>WDD 131</p>
+
+                <p>WDD 231</p>
+
+            </div>
+
+            <p>
+                The total credits for courses listed above is
+                <span id="totalCredits">6</span>
+            </p>
+
+        </section>
+
+    </main>
+
+   
+
+    <footer>
+
+        
+
+        <div class="social">
+
+            <a href="https://github.com/Galbapaz"
+               target="_blank">
+
+                <img src="images/github.png"
+                     alt="GitHub icon">
+
+            </a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank">
+
+                <img src="images/linkedin.png"
+                     alt="LinkedIn icon">
+
+            </a>
+
+            <a href="#"
+               target="_blank">
+
+                <img src="images/x.avif"
+                     alt="X social media icon">
+
+            </a>
+
+        </div>
+
+       
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            • Gabriel Alba • Bolivia
+        </p>
+
+        
+
+        <p id="lastModified"></p>
+
+    </footer>
+
 </body>
+
 </html>
