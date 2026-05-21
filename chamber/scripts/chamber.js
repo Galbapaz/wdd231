@@ -1,0 +1,141 @@
+// ===============================
+// FOOTER DYNAMIC YEAR
+// ===============================
+
+const year = document.querySelector("#year");
+
+year.textContent = new Date().getFullYear();
+
+
+// ===============================
+// LAST MODIFIED
+// ===============================
+
+const lastModified = document.querySelector("#lastModified");
+
+lastModified.textContent =
+    `Last Modification: ${document.lastModified}`;
+
+
+// ===============================
+// HAMBURGER MENU
+// ===============================
+
+const menuButton = document.querySelector("#menu");
+
+const navigation = document.querySelector(".navigation");
+
+menuButton.addEventListener("click", () => {
+
+    navigation.classList.toggle("open");
+
+    menuButton.classList.toggle("open");
+
+});
+
+
+// ===============================
+// FETCH MEMBERS
+// ===============================
+
+const url = "data/members.json";
+
+const cards = document.querySelector("#members-container");
+
+
+// ===============================
+// ASYNC FUNCTION
+// ===============================
+
+async function getMembers() {
+
+    const response = await fetch(url);
+
+    const data = await response.json();
+
+    displayMembers(data);
+
+}
+
+
+// ===============================
+// DISPLAY MEMBERS
+// ===============================
+
+const displayMembers = (members) => {
+
+    members.forEach((member) => {
+
+        const card = document.createElement("section");
+
+        card.classList.add("member-card");
+
+        card.innerHTML = `
+
+            <img src="images/${member.image}"
+                 alt="${member.name} Logo"
+                 loading="lazy">
+
+            <h3>${member.name}</h3>
+
+            <p>${member.industry}</p>
+
+            <p><strong>PHONE:</strong> ${member.phone}</p>
+
+            <p><strong>ADDRESS:</strong> ${member.address}</p>
+
+            <p>
+                <strong>URL:</strong>
+                <a href="${member.website}"
+                   target="_blank">
+                   ${member.website}
+                </a>
+            </p>
+
+            <p>
+                <strong>Membership:</strong>
+                ${member.membership}
+            </p>
+        `;
+
+        cards.appendChild(card);
+
+    });
+
+};
+
+
+// ===============================
+// CALL FUNCTION
+// ===============================
+
+getMembers();
+
+
+// ===============================
+// GRID / LIST VIEW
+// ===============================
+
+const gridButton = document.querySelector("#grid");
+
+const listButton = document.querySelector("#list");
+
+
+// GRID
+gridButton.addEventListener("click", () => {
+
+    cards.classList.add("grid");
+
+    cards.classList.remove("list");
+
+});
+
+
+// LIST
+listButton.addEventListener("click", () => {
+
+    cards.classList.add("list");
+
+    cards.classList.remove("grid");
+
+});
