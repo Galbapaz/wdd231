@@ -6,7 +6,7 @@
 
     /* HEADER */
 
-    header {
+    .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,6 +22,7 @@
         display: flex;
         flex-direction: row;
         gap: 2rem;
+        margin-top: 0;
     }
 
     /* MEMBERS GRID */
@@ -33,16 +34,12 @@
     /* LIST VIEW */
 
     #members-container.list .member-card {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: center;
         text-align: left;
-        gap: 2rem;
     }
 
     /* FOOTER */
 
-    footer {
+    .footer-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;

@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Meta Basics -->
+
+    <!-- META -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
     <title>Santa Cruz Chamber of Commerce | Directory</title>
 
     <meta name="description"
-        content="Official directory page for the Santa Cruz de la Sierra Chamber of Commerce. Find local businesses, networking opportunities, and community resources.">
+        content="Official business directory of the Santa Cruz Chamber of Commerce.">
 
-    <meta name="author" content="Gabriel Alba">
+    <meta name="author"
+        content="Gabriel Alba">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
+    <!-- FAVICON -->
+    <link rel="icon"
+        href="favicon.ico">
 
-    <!-- Facebook Open Graph Meta -->
-    <meta property="og:title" content="Santa Cruz Chamber of Commerce">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title"
+        content="Santa Cruz Chamber of Commerce">
+
     <meta property="og:description"
-        content="Supporting local businesses and economic growth in Santa Cruz de la Sierra, Bolivia.">
+        content="Supporting local businesses in Santa Cruz de la Sierra.">
 
     <meta property="og:image"
         content="https://yourgithubusername.github.io/wdd231/chamber/images/chamber-social.webp">
@@ -27,23 +35,34 @@
     <meta property="og:url"
         content="https://yourgithubusername.github.io/wdd231/chamber/directory.html">
 
-    <meta property="og:type" content="website">
+    <meta property="og:type"
+        content="website">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet"
+        href="styles/normalize.css">
 
-    <!-- JavaScript -->
-    <script src="scripts/chamber.js" defer></script>
+    <link rel="stylesheet"
+        href="styles/small.css">
+
+    <link rel="stylesheet"
+        href="styles/larger.css">
+
+    <!-- JS -->
+    <script src="scripts/chamber.js"
+        defer></script>
+
 </head>
 
 <body>
@@ -51,51 +70,137 @@
     <!-- HEADER -->
     <header>
 
-        <div class="logo-container">
-            <img src="images/logo.webp"
-                alt="Santa Cruz Chamber of Commerce Logo"
-                width="80"
-                height="80">
+        <div class="header-container">
 
-            <div>
-                <h1>Santa Cruz Chamber of Commerce</h1>
-                <p>Connecting Local Businesses</p>
+            <!-- LOGO -->
+            <div class="logo-container">
+
+                <img src="images/logo.webp"
+                    alt="Santa Cruz Chamber of Commerce Logo"
+                    width="80"
+                    height="80">
+
+                <div class="logo-text">
+
+                    <h1>Santa Cruz Chamber of Commerce</h1>
+
+                    <p>Connecting Local Businesses</p>
+
+                </div>
+
             </div>
+
+            <!-- NAVIGATION -->
+            <nav>
+
+                <button id="menu"
+                    aria-label="Open navigation menu"></button>
+
+                <ul class="navigation">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="discover.html">Discover</a>
+                    </li>
+
+                    <li>
+                        <a href="directory.html"
+                            class="active">Directory</a>
+                    </li>
+
+                    <li>
+                        <a href="join.html">Join</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
         </div>
-
-        <!-- Navigation -->
-        <nav>
-            <button id="menu"></button>
-
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="discover.html">Discover</a></li>
-
-                <li><a href="directory.html" class="active">Directory</a></li>
-
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
 
     </header>
 
     <!-- MAIN -->
     <main>
 
-        <h2>Business Directory</h2>
+        <section class="directory-section">
 
-        <!-- View Buttons -->
-        <div class="menu-buttons">
-            <button id="grid">⬛ Grid</button>
-            <button id="list">📋 List</button>
-        </div>
+            <h2>Business Directory</h2>
 
-        <!-- Members Container -->
-        <section id="members-container"
-            class="grid">
+            <!-- BUTTONS -->
+            <div class="menu-buttons">
 
-            <!-- JavaScript will insert member cards here -->
+                <button id="grid">
+                    ⬛ Grid
+                </button>
+
+                <button id="list">
+                    📋 List
+                </button>
+
+            </div>
+
+            <!-- MEMBERS -->
+            <section id="members-container"
+                class="grid">
+
+                <!-- TEMPORARY SAMPLE CARDS -->
+
+                <div class="member-card">
+
+                    <img src="images/business1.webp"
+                        alt="Santa Cruz Tech">
+
+                    <h3>Santa Cruz Tech</h3>
+
+                    <p>Technology Solutions</p>
+
+                    <p><strong>PHONE:</strong> +591 70000000</p>
+
+                    <p><strong>EMAIL:</strong> info@sctech.com</p>
+
+                    <p><strong>URL:</strong> www.sctech.com</p>
+
+                </div>
+
+                <div class="member-card">
+
+                    <img src="images/business2.webp"
+                        alt="Bolivia Finance">
+
+                    <h3>Bolivia Finance</h3>
+
+                    <p>Financial Services</p>
+
+                    <p><strong>PHONE:</strong> +591 71111111</p>
+
+                    <p><strong>EMAIL:</strong> contact@finance.com</p>
+
+                    <p><strong>URL:</strong> www.finance.com</p>
+
+                </div>
+
+                <div class="member-card">
+
+                    <img src="images/business3.webp"
+                        alt="Green Energy">
+
+                    <h3>Green Energy SC</h3>
+
+                    <p>Renewable Energy</p>
+
+                    <p><strong>PHONE:</strong> +591 72222222</p>
+
+                    <p><strong>EMAIL:</strong> hello@green.com</p>
+
+                    <p><strong>URL:</strong> www.green.com</p>
+
+                </div>
+
+            </section>
 
         </section>
 
@@ -104,62 +209,82 @@
     <!-- FOOTER -->
     <footer>
 
-        <section class="footer-info">
+        <div class="footer-container">
 
-            <h3>Santa Cruz Chamber of Commerce</h3>
+            <!-- INFO -->
+            <section class="footer-info">
 
-            <p>Av. Cristo Redentor</p>
+                <h3>Santa Cruz Chamber of Commerce</h3>
 
-            <p>Santa Cruz de la Sierra, Bolivia</p>
+                <p>Av. Cristo Redentor</p>
 
-            <p>Email: info@santacruzchamber.org</p>
+                <p>Santa Cruz de la Sierra, Bolivia</p>
 
-            <p>Phone: +591 3 1234567</p>
+                <p>Email: info@santacruzchamber.org</p>
 
-        </section>
+                <p>Phone: +591 3 1234567</p>
 
-        <section class="footer-social">
+            </section>
 
-            <a href="#">
-                <img src="images/facebook.webp"
-                    alt="Facebook Icon"
-                    width="40"
-                    height="40">
-            </a>
+            <!-- SOCIAL -->
+            <section class="footer-social">
 
-            <a href="#">
-                <img src="images/twitter.webp"
-                    alt="Twitter Icon"
-                    width="40"
-                    height="40">
-            </a>
+                <a href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-            <a href="#">
-                <img src="images/linkedin.webp"
-                    alt="LinkedIn Icon"
-                    width="40"
-                    height="40">
-            </a>
+                    <img src="images/facebook.webp"
+                        alt="Facebook Icon"
+                        width="40"
+                        height="40">
 
-        </section>
+                </a>
 
-        <section class="footer-dev">
+                <a href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-            <p>WDD 231 Chamber Project</p>
+                    <img src="images/twitter.webp"
+                        alt="Twitter Icon"
+                        width="40"
+                        height="40">
 
-            <p>Gabriel Alba</p>
+                </a>
 
-            <p>
-                &copy;
-                <span id="year"></span>
-                Santa Cruz Chamber of Commerce
-            </p>
+                <a href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-            <p id="lastModified"></p>
+                    <img src="images/linkedin.webp"
+                        alt="LinkedIn Icon"
+                        width="40"
+                        height="40">
 
-        </section>
+                </a>
+
+            </section>
+
+            <!-- DEVELOPMENT -->
+            <section class="footer-dev">
+
+                <p>WDD 231 Chamber Project</p>
+
+                <p>Gabriel Alba</p>
+
+                <p>
+                    &copy;
+                    <span id="year"></span>
+                    Santa Cruz Chamber of Commerce
+                </p>
+
+                <p id="lastModified"></p>
+
+            </section>
+
+        </div>
 
     </footer>
 
 </body>
+
 </html>
