@@ -1,10 +1,8 @@
-/* =========================
-   LARGE SCREENS
-========================= */
+
 
 @media screen and (min-width: 768px) {
 
-    /* HEADER */
+   
 
     .header-container {
         display: flex;
@@ -12,7 +10,7 @@
         align-items: center;
     }
 
-    /* NAVIGATION */
+   
 
     #menu {
         display: none;
@@ -25,19 +23,19 @@
         margin-top: 0;
     }
 
-    /* MEMBERS GRID */
+
 
     #members-container.grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* LIST VIEW */
+   
 
     #members-container.list .member-card {
         text-align: left;
     }
 
-    /* FOOTER */
+  
 
     .footer-container {
         display: grid;

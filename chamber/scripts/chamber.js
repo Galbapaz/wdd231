@@ -1,25 +1,15 @@
-// ===============================
-// FOOTER DYNAMIC YEAR
-// ===============================
+
 
 const year = document.querySelector("#year");
 
 year.textContent = new Date().getFullYear();
 
 
-// ===============================
-// LAST MODIFIED
-// ===============================
-
 const lastModified = document.querySelector("#lastModified");
 
 lastModified.textContent =
     `Last Modification: ${document.lastModified}`;
 
-
-// ===============================
-// HAMBURGER MENU
-// ===============================
 
 const menuButton = document.querySelector("#menu");
 
@@ -33,19 +23,11 @@ menuButton.addEventListener("click", () => {
 
 });
 
-
-// ===============================
-// FETCH MEMBERS
-// ===============================
-
 const url = "data/members.json";
 
 const cards = document.querySelector("#members-container");
 
 
-// ===============================
-// ASYNC FUNCTION
-// ===============================
 
 async function getMembers() {
 
@@ -58,9 +40,6 @@ async function getMembers() {
 }
 
 
-// ===============================
-// DISPLAY MEMBERS
-// ===============================
 
 const displayMembers = (members) => {
 
@@ -105,23 +84,17 @@ const displayMembers = (members) => {
 };
 
 
-// ===============================
-// CALL FUNCTION
-// ===============================
 
 getMembers();
 
 
-// ===============================
-// GRID / LIST VIEW
-// ===============================
 
 const gridButton = document.querySelector("#grid");
 
 const listButton = document.querySelector("#list");
 
 
-// GRID
+
 gridButton.addEventListener("click", () => {
 
     cards.classList.add("grid");
@@ -131,7 +104,7 @@ gridButton.addEventListener("click", () => {
 });
 
 
-// LIST
+
 listButton.addEventListener("click", () => {
 
     cards.classList.add("list");

@@ -1,6 +1,4 @@
-/* =========================
-   ROOT VARIABLES
-========================= */
+
 
 :root {
     --primary-color: #0B3C5D;
@@ -14,9 +12,6 @@
     --body-font: 'Roboto', sans-serif;
 }
 
-/* =========================
-   GLOBAL STYLES
-========================= */
 
 * {
     margin: 0;
@@ -36,9 +31,7 @@ img {
     height: auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+
 
 header {
     background-color: var(--primary-color);
@@ -71,9 +64,7 @@ header {
     font-size: 0.95rem;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+
 
 #menu {
     background: none;
@@ -121,9 +112,7 @@ header {
     padding-bottom: 0.2rem;
 }
 
-/* =========================
-   MAIN
-========================= */
+
 
 main {
     max-width: 1200px;
@@ -144,9 +133,6 @@ main h2 {
     font-size: 2rem;
 }
 
-/* =========================
-   BUTTONS
-========================= */
 
 .menu-buttons {
     display: flex;
@@ -171,9 +157,7 @@ main h2 {
     color: black;
 }
 
-/* =========================
-   GRID VIEW
-========================= */
+
 
 #members-container.grid {
     display: grid;
@@ -181,9 +165,7 @@ main h2 {
     gap: 1.5rem;
 }
 
-/* =========================
-   MEMBER CARDS
-========================= */
+
 
 .member-card {
     background-color: var(--card-color);
@@ -213,9 +195,7 @@ main h2 {
     margin-bottom: 0.5rem;
 }
 
-/* =========================
-   LIST VIEW
-========================= */
+
 
 #members-container.list {
     display: flex;
@@ -231,9 +211,7 @@ main h2 {
     display: none;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 
 footer {
     background-color: var(--primary-color);
