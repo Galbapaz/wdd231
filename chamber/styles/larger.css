@@ -1,0 +1,51 @@
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media screen and (min-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* NAVIGATION */
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* MEMBERS GRID */
+
+    #members-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* LIST VIEW */
+
+    #members-container.list .member-card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+}
