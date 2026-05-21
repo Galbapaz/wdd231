@@ -52,9 +52,11 @@ const displayMembers = (members) => {
         card.innerHTML = `
 
             <img src="images/${member.image}"
-                 alt="${member.name} Logo"
-                 loading="lazy">
-
+              alt="Logo of ${member.name}"
+              loading="lazy"
+              width="300"
+              height="200">
+              
             <h3>${member.name}</h3>
 
             <p>${member.industry}</p>
