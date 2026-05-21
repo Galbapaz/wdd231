@@ -1,0 +1,73 @@
+/* normalize.css */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Improve media defaults */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove list styles */
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* Improve body defaults */
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/* Improve links */
+
+a {
+    text-decoration: none;
+}
+
+/* Form elements inherit fonts */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove button default styles */
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
