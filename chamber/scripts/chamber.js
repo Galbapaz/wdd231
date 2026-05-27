@@ -35,7 +35,9 @@ async function getMembers() {
 
     const data = await response.json();
 
-    displayMembers(data);
+    if (cards) {
+        displayMembers(data);
+    }
 
 }
 
@@ -97,20 +99,22 @@ const listButton = document.querySelector("#list");
 
 
 
-gridButton.addEventListener("click", () => {
+if (gridButton && listButton) {
 
-    cards.classList.add("grid");
+    gridButton.addEventListener("click", () => {
 
-    cards.classList.remove("list");
+        cards.classList.add("grid");
 
-});
+        cards.classList.remove("list");
 
+    });
 
+    listButton.addEventListener("click", () => {
 
-listButton.addEventListener("click", () => {
+        cards.classList.add("list");
 
-    cards.classList.add("list");
+        cards.classList.remove("grid");
 
-    cards.classList.remove("grid");
+    });
 
-});
+}

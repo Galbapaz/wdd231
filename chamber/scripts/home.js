@@ -8,15 +8,15 @@ const membersURL =
     'data/members.json';
 
 
-
-
 async function getWeather() {
 
     try {
 
-        const response = await fetch(weatherURL);
+        const response =
+            await fetch(weatherURL);
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
         displayWeather(data);
 
@@ -35,24 +35,32 @@ function displayWeather(data) {
     const weatherContainer =
         document.querySelector('#weather');
 
+    if (!weatherContainer) return;
+
     weatherContainer.innerHTML = `
-        <p>${Math.round(data.main.temp)}°C</p>
-        <p>${data.weather[0].description}</p>
+        <p>
+            <strong>Temperature:</strong>
+            ${Math.round(data.main.temp)}°C
+        </p>
+
+        <p>
+            <strong>Condition:</strong>
+            ${data.weather[0].description}
+        </p>
     `;
 
 }
 
 
-
-/* FORECAST */
-
 async function getForecast() {
 
     try {
 
-        const response = await fetch(forecastURL);
+        const response =
+            await fetch(forecastURL);
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
         displayForecast(data);
 
@@ -71,34 +79,38 @@ function displayForecast(data) {
     const forecastContainer =
         document.querySelector('#forecast');
 
+    if (!forecastContainer) return;
+
     const forecastList =
         data.list.filter(item =>
             item.dt_txt.includes('12:00:00'));
 
     forecastContainer.innerHTML = '';
 
+
+
     forecastList.slice(0, 3).forEach(day => {
 
         const date =
             new Date(day.dt_txt);
 
-        const card =
+        const forecastCard =
             document.createElement('p');
 
-        card.innerHTML = `
-            ${date.toLocaleDateString('en-US', { weekday: 'long' })}:
+        forecastCard.innerHTML = `
+            <strong>
+                ${date.toLocaleDateString('en-US',
+                    { weekday: 'long' })}
+            </strong>:
             ${Math.round(day.main.temp)}°C
         `;
 
-        forecastContainer.appendChild(card);
+        forecastContainer.appendChild(forecastCard);
 
     });
 
 }
 
-
-
-/* SPOTLIGHTS */
 
 async function getSpotlights() {
 
@@ -110,7 +122,7 @@ async function getSpotlights() {
         const data =
             await response.json();
 
-        displaySpotlights(data.members);
+        displaySpotlights(data);
 
     } catch (error) {
 
@@ -127,12 +139,14 @@ function displaySpotlights(members) {
     const container =
         document.querySelector('#spotlights-container');
 
+    if (!container) return;
+
 
 
     const filtered =
         members.filter(member =>
-            member.membership === 'Gold' ||
-            member.membership === 'Silver');
+            member.membership === 2 ||
+            member.membership === 3);
 
 
 
@@ -156,14 +170,24 @@ function displaySpotlights(members) {
 
 
         card.innerHTML = `
-            <img src="${member.image}"
-                alt="${member.name} logo">
+
+            <img src="images/${member.image}"
+                alt="${member.name} logo"
+                loading="lazy">
 
             <h3>${member.name}</h3>
 
-            <p>${member.address}</p>
+            <p>${member.industry}</p>
 
-            <p>${member.phone}</p>
+            <p>
+                <strong>Phone:</strong>
+                ${member.phone}
+            </p>
+
+            <p>
+                <strong>Address:</strong>
+                ${member.address}
+            </p>
 
             <p>
                 <a href="${member.website}"
@@ -173,8 +197,8 @@ function displaySpotlights(members) {
             </p>
 
             <p>
-                Membership:
-                ${member.membership}
+                <strong>Membership:</strong>
+                ${member.membership === 3 ? 'Gold' : 'Silver'}
             </p>
         `;
 
@@ -186,6 +210,9 @@ function displaySpotlights(members) {
 
 
 
+
 getWeather();
+
 getForecast();
+
 getSpotlights();
