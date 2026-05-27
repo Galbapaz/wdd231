@@ -26,7 +26,7 @@
         content="Connecting local businesses and strengthening our community in Santa Cruz de la Sierra.">
 
     <meta property="og:image"
-        content="https://galbapaz.github.io/wdd231/chamber/images/chamber-social.webp">
+        content="images/hero.webp">
 
     <meta property="og:url"
         content="https://galbapaz.github.io/wdd231/chamber/index.html">
@@ -62,6 +62,8 @@
 </head>
 
 <body>
+
+    <!-- HEADER -->
 
     <header>
 
@@ -128,73 +130,63 @@
 
     </header>
 
+
+
+    <!-- MAIN -->
+
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
 
         <section class="hero">
 
-            <img src="images/hero.png"
+            <img src="images/hero.webp"
                 alt="Santa Cruz business community">
 
-            <div class="hero-content">
+            <a href="join.html"
+                class="cta-button">
 
-                <h1>
-                    Welcome to Santa Cruz Chamber of Commerce
-                </h1>
+                Join the Chamber
 
-                <p>
-                    Connecting businesses and building a stronger community.
-                </p>
-
-                <a href="join.html"
-                    class="cta-button">
-                    Join the Chamber
-                </a>
-
-            </div>
+            </a>
 
         </section>
 
 
 
-        <!-- HOME INFO -->
+        <!-- HOME TITLE -->
 
-        <section class="home-info">
-
-            <!-- EVENTS SECTION -->
-
-            <section class="info-card">
-
-                <h2>
-                    Current Events
-                </h2>
-
-                <p>
-                    📅 Business Networking Event - Friday 6:00 PM
-                </p>
-
-                <p>
-                    📅 Entrepreneurship Workshop - Saturday 10:00 AM
-                </p>
-
-                <p>
-                    📅 Santa Cruz Business Expo - Next Month
-                </p>
-
-            </section>
+        <h1 class="home-title">
+            Home
+        </h1>
 
 
 
-            <!-- WEATHER SECTION -->
+        <!-- INFO GRID -->
 
-            <section class="info-card">
+        <section class="info-grid">
+
+            <!-- EVENTS -->
+
+            <section class="events-card">
 
                 <h2>
-                    Weather
+                    Events
                 </h2>
 
-                <div id="weather">
+                <div class="card-content">
+
+                    <p>
+                        📅 Business Networking Event - Friday 6:00 PM
+                    </p>
+
+                    <p>
+                        📅 Entrepreneurship Workshop - Saturday 10:00 AM
+                    </p>
+
+                    <p>
+                        📅 Santa Cruz Business Expo - Next Month
+                    </p>
 
                 </div>
 
@@ -202,15 +194,33 @@
 
 
 
-            <!-- FORECAST SECTION -->
+            <!-- WEATHER -->
 
-            <section class="info-card">
+            <section class="weather-card">
 
                 <h2>
-                    3-Day Forecast
+                    Current Weather
                 </h2>
 
-                <div id="forecast">
+                <div id="weather"
+                    class="card-content">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FORECAST -->
+
+            <section class="forecast-card">
+
+                <h2>
+                    Weather Forecast
+                </h2>
+
+                <div id="forecast"
+                    class="card-content">
 
                 </div>
 
@@ -220,26 +230,24 @@
 
 
 
-        <!-- BUSINESS SPOTLIGHTS -->
+        <!-- SPOTLIGHTS -->
 
-        <section class="spotlights">
-
-            <h2>
-                Business Spotlights
-            </h2>
-
-            <div id="spotlights-container"
-                class="spotlight-container">
-
-            </div>
+        <section id="spotlights-container"
+            class="spotlights">
 
         </section>
 
     </main>
 
+
+
+    <!-- FOOTER -->
+
     <footer>
 
         <div class="footer-container">
+
+            <!-- CONTACT INFO -->
 
             <section class="footer-info">
 
@@ -264,6 +272,10 @@
                 </p>
 
             </section>
+
+
+
+            <!-- SOCIAL MEDIA -->
 
             <div class="footer-social">
 
@@ -295,6 +307,10 @@
                 </a>
 
             </div>
+
+
+
+            <!-- PROJECT INFO -->
 
             <div class="footer-dev">
 

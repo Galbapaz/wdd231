@@ -9,7 +9,6 @@ const membersURL =
 
 
 
-/* WEATHER */
 
 async function getWeather() {
 
