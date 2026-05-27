@@ -4,7 +4,7 @@
         "address": "Av. Banzer, Santa Cruz",
         "phone": "+591 70000000",
         "website": "https://www.sctech.com",
-        "image": "business1.webp",
+        "image": "images/business1.webp",
         "membership": 3,
         "industry": "Technology Solutions"
     },
@@ -14,7 +14,7 @@
         "address": "Equipetrol, Santa Cruz",
         "phone": "+591 71111111",
         "website": "https://www.finance.com",
-        "image": "business2.webp",
+        "image": "images/business2.webp",
         "membership": 2,
         "industry": "Financial Services"
     },
@@ -24,7 +24,7 @@
         "address": "Av. Alemana, Santa Cruz",
         "phone": "+591 72222222",
         "website": "https://www.green.com",
-        "image": "business3.webp",
+        "image": "images/business3.webp",
         "membership": 3,
         "industry": "Renewable Energy"
     },
@@ -34,7 +34,7 @@
         "address": "Centro, Santa Cruz",
         "phone": "+591 73333333",
         "website": "https://www.urbancoffee.com",
-        "image": "business4.webp",
+        "image": "images/business4.webp",
         "membership": 1,
         "industry": "Coffee Shop"
     },
@@ -44,7 +44,7 @@
         "address": "Equipetrol Norte",
         "phone": "+591 74444444",
         "website": "https://www.andesmarketing.com",
-        "image": "business5.webp",
+        "image": "images/business5.webp",
         "membership": 2,
         "industry": "Digital Marketing"
     },
@@ -54,7 +54,7 @@
         "address": "Av. Santos Dumont",
         "phone": "+591 75555555",
         "website": "https://www.scmotors.com",
-        "image": "business6.webp",
+        "image": "images/business6.webp",
         "membership": 3,
         "industry": "Automotive"
     },
@@ -64,7 +64,7 @@
         "address": "Av. Busch",
         "phone": "+591 76666666",
         "website": "https://www.healthylife.com",
-        "image": "business7.webp",
+        "image": "images/business7.webp",
         "membership": 1,
         "industry": "Healthcare"
     }
