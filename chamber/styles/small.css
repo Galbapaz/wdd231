@@ -249,3 +249,252 @@ footer {
 .footer-social img:hover {
     transform: scale(1.1);
 }
+
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 15px;
+}
+
+
+
+/* ---------- CTA BUTTON ---------- */
+
+.cta-button {
+    position: absolute;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #f4b400;
+
+    color: black;
+
+    padding: 1rem 1.5rem;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00;
+}
+
+
+
+/* ---------- HOME TITLE ---------- */
+
+.home-title {
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: #0b3d62;
+}
+
+
+
+/* ---------- INFO GRID ---------- */
+
+.info-grid {
+    display: grid;
+
+    gap: 1.5rem;
+
+    margin-bottom: 2rem;
+}
+
+
+
+/* ---------- HOME CARDS ---------- */
+
+.events-card,
+.weather-card,
+.forecast-card {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    transition: transform 0.3s ease;
+}
+
+
+
+/* ---------- CARD HOVER ---------- */
+
+.events-card:hover,
+.weather-card:hover,
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* ---------- CARD TITLES ---------- */
+
+.events-card h2,
+.weather-card h2,
+.forecast-card h2 {
+
+    background-color: #0b3d62;
+
+    color: white;
+
+    margin: 0;
+
+    padding: 1rem;
+
+    font-size: 1.2rem;
+}
+
+
+
+/* ---------- CARD CONTENT ---------- */
+
+.card-content {
+    padding: 1.2rem;
+}
+
+
+
+/* ---------- WEATHER TEXT ---------- */
+
+#weather p,
+#forecast p {
+    margin-bottom: 0.7rem;
+}
+
+
+
+/* ---------- SPOTLIGHTS ---------- */
+
+.spotlights {
+    display: grid;
+
+    gap: 1.5rem;
+
+    margin-bottom: 2rem;
+}
+
+
+
+/* ---------- SPOTLIGHT CARD ---------- */
+
+.spotlight-card {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 1.5rem;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    transition: transform 0.3s ease;
+}
+
+
+
+/* ---------- SPOTLIGHT HOVER ---------- */
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* ---------- SPOTLIGHT IMAGE ---------- */
+
+.spotlight-card img {
+
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    margin-bottom: 1rem;
+
+    border-radius: 50%;
+}
+
+
+
+/* ---------- SPOTLIGHT TEXT ---------- */
+
+.spotlight-card h3 {
+
+    margin-bottom: 0.7rem;
+
+    color: #0b3d62;
+}
+
+.spotlight-card p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* ---------- LINKS ---------- */
+
+.spotlight-card a {
+
+    color: #0b3d62;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+
+    .hero img {
+        height: 220px;
+    }
+
+    .cta-button {
+
+        font-size: 0.9rem;
+
+        padding: 0.7rem 1rem;
+    }
+
+}

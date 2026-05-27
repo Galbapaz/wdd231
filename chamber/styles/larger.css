@@ -44,3 +44,19 @@
     }
 
 }
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.spotlights {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero img {
+    height: 450px;
+}
