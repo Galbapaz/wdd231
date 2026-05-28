@@ -1,8 +1,4 @@
-
-
 @media screen and (min-width: 768px) {
-
-   
 
     .header-container {
         display: flex;
@@ -10,11 +6,13 @@
         align-items: center;
     }
 
-   
+
 
     #menu {
         display: none;
     }
+
+
 
     .navigation {
         display: flex;
@@ -29,13 +27,13 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-   
+
 
     #members-container.list .member-card {
         text-align: left;
     }
 
-  
+
 
     .footer-container {
         display: grid;
@@ -43,20 +41,26 @@
         align-items: center;
     }
 
-}
 
-/* =========================================
-   HOME PAGE
-========================================= */
 
-.info-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-}
+    /* =========================================
+       HOME PAGE
+    ========================================= */
 
-.spotlights {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .info-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
 
-.hero img {
-    height: 450px;
+
+
+    .spotlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+    .hero img {
+        height: 450px;
+    }
+
 }
