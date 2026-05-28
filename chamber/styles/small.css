@@ -271,17 +271,25 @@ h2 {
 
 .hero {
     position: relative;
-    margin-bottom: 2rem;
 }
 
-
+.cta-button {
+    position: absolute;
+    z-index: 2;
+}
 
 .hero img {
     width: 100%;
     height: 350px;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
 }
 
 
