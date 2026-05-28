@@ -1,6 +1,4 @@
-/* =========================================
-   GLOBAL STYLES
-========================================= */
+
 
 * {
     box-sizing: border-box;
@@ -18,10 +16,6 @@ body {
 }
 
 
-
-/* =========================================
-   HEADER
-========================================= */
 
 header {
     background-color: #0b3d62;
@@ -59,10 +53,6 @@ header {
 }
 
 
-
-/* =========================================
-   NAVIGATION
-========================================= */
 
 #menu {
     background: none;
@@ -130,10 +120,6 @@ header {
 
 
 
-/* =========================================
-   MAIN
-========================================= */
-
 main {
     padding: 1rem;
 }
@@ -151,11 +137,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-
-
-/* =========================================
-   DIRECTORY PAGE
-========================================= */
 
 .directory-section {
     margin-top: 2rem;
@@ -242,11 +223,6 @@ h2 {
 }
 
 
-
-/* =========================================
-   LIST VIEW
-========================================= */
-
 #members-container.list {
     display: flex;
     flex-direction: column;
@@ -264,18 +240,8 @@ h2 {
 }
 
 
-
-/* =========================================
-   HOME PAGE
-========================================= */
-
 .hero {
     position: relative;
-}
-
-.cta-button {
-    position: absolute;
-    z-index: 2;
 }
 
 .hero img {
@@ -292,12 +258,12 @@ h2 {
     background: rgba(0,0,0,0.35);
 }
 
-
-
 .cta-button {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    z-index: 2;
+
     background-color: #f4b400;
     color: #000000;
     padding: 1rem 1.5rem;
@@ -308,11 +274,10 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-
-
 .cta-button:hover {
     background-color: #ffcc00;
 }
+
 
 
 
