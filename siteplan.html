@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Spark – Site Plan</title>
+    <meta name="description" content="Site plan for English Spark, an English learning resource website.">
+    <meta name="author" content="Gabriel Alba">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --primary:   #1a3c5e;   
+            --accent:    #e8a020;   
+            --light-bg:  #f0f6fb;   
+            --card-bg:   #ffffff;   
+            --text:      #222222;   
+            --muted:     #555555;   
+        }
+
+       
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; color: var(--primary); }
+
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        
+        header {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        
+        section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        section p {
+            color: var(--muted);
+            margin-bottom: 0.8rem;
+        }
+
+        section p strong {
+            color: var(--text);
+        }
+
+       
+        .swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .swatch-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .swatch p {
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--text);
+            margin: 0;
+        }
+
+
+        .font-example {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .font-example h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .font-example p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .font-body-example {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--text);
+            margin-top: 0.3rem;
+        }
+
+
+        .scenario-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .scenario-item {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--accent);
+            padding: 0.8rem 1rem;
+            border-radius: 0 8px 8px 0;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+
+        .wireframes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .wireframe-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .wireframe-container p {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+
+        .wf-mobile {
+            width: 160px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+
+        .wf-desktop {
+            width: 420px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .wf-bar {
+            background-color: var(--primary);
+            color: #fff;
+            font-size: 0.6rem;
+            padding: 0.4rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .wf-hero {
+            background-color: #cce0f0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            color: #336;
+        }
+
+        .wf-hero-desktop {
+            background-color: #cce0f0;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: #336;
+        }
+
+        .wf-block {
+            background-color: #e8e8e8;
+            margin: 0.4rem;
+            border-radius: 4px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55rem;
+            color: #555;
+        }
+
+        .wf-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem;
+            padding: 0.4rem;
+        }
+
+        .wf-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.3rem;
+            padding: 0.4rem;
+        }
+
+        .wf-grid-item {
+            background-color: #e8e8e8;
+            border-radius: 4px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .wf-footer {
+            background-color: var(--primary);
+            color: #aac;
+            font-size: 0.5rem;
+            padding: 0.4rem;
+            text-align: center;
+        }
+
+        .wf-section-label {
+            font-size: 0.55rem;
+            color: #888;
+            text-align: center;
+            padding: 0.2rem 0.4rem;
+        }
+
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 0.7rem 1rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #ddd;
+            color: var(--muted);
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background-color: var(--light-bg); }
+
+        footer {
+            background-color: var(--primary);
+            color: #aac;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        footer span { color: var(--accent); }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>English Spark</h1>
+        <p>Individual Website Project – Site Plan | WDD 231 | Gabriel Alba</p>
+    </header>
+
+    <main>
+
+
+        <section>
+            <h2>1. Site Name</h2>
+            <p>
+                <strong>English Spark</strong>
+            </p>
+            <p>
+                This name was chosen because it communicates energy, motivation, and the beginning of something — a "spark" of learning. It is short, memorable, and easy to associate with language learning. The word "English" makes the topic immediately clear, while "Spark" evokes curiosity and excitement, which is exactly the feeling this site aims to create in students who are beginning or continuing their English learning journey.
+            </p>
+            <p><strong>Possible domain:</strong> english-spark.com</p>
+        </section>
+
+
+        <section>
+            <h2>2. Site Purpose</h2>
+            <p>
+                English Spark is a free, interactive English learning resource designed for students who are learning English as a second or foreign language. The site provides a vocabulary practice section where students can explore English words and phrases with definitions, example sentences, and difficulty levels. Students can filter vocabulary by category, save their favorite words using local storage, and click on any word card to open a modal with full word details and usage tips. The site also includes a resources page with curated grammar tips and learning strategies, as well as a contact form where students can suggest words or topics they want to learn.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>3. Scenarios</h2>
+            <p>These are questions a typical site visitor (an English learner) might ask when visiting English Spark:</p>
+            <div class="scenario-list">
+                <div class="scenario-item">
+                    "I am a beginner. Where can I find easy vocabulary words with examples to practice every day?"
+                </div>
+                <div class="scenario-item">
+                    "How can I save the words I want to study later so I can come back to them?"
+                </div>
+                <div class="scenario-item">
+                    "I want to know what the difference is between formal and informal English words. Does this site explain that?"
+                </div>
+                <div class="scenario-item">
+                    "Can I suggest a word or topic I need help with to the teacher who made this site?"
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>4. Color Scheme</h2>
+            <p>The color palette was chosen to feel professional, calm, and approachable — appropriate for an educational audience.</p>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color:#1a3c5e;"></div>
+                    <p><strong>#1a3c5e</strong><br>Deep Navy<br>Header, footer, headings, nav</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color:#e8a020;"></div>
+                    <p><strong>#e8a020</strong><br>Warm Amber<br>Buttons, highlights, accents, borders</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color:#f0f6fb;"></div>
+                    <p><strong>#f0f6fb</strong><br>Light Blue-White<br>Page background</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color:#ffffff; border: 1px solid #ccc;"></div>
+                    <p><strong>#ffffff</strong><br>White<br>Cards, modals, forms</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color:#222222;"></div>
+                    <p><strong>#222222</strong><br>Near Black<br>Body text</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>5. Typography</h2>
+            <p>Two Google Fonts will be used to create a balance between elegance and readability:</p>
+
+            <div class="font-example">
+                <h3>Merriweather – Headings (h1, h2, h3)</h3>
+                <p>A serif font that conveys trust, education, and professionalism. Used for all page titles and section headings.</p>
+                <p style="font-family:'Merriweather',serif; font-size:1.3rem; color:#1a3c5e; margin-top:0.5rem;">
+                    Welcome to English Spark
+                </p>
+            </div>
+
+            <div class="font-example" style="margin-top:1rem;">
+                <h3 style="font-family:'Open Sans',sans-serif; font-weight:600; color:#1a3c5e;">Open Sans – Body Text & UI</h3>
+                <p>A clean, modern sans-serif font that is highly legible on screens of all sizes. Used for paragraphs, labels, buttons, and navigation.</p>
+                <p class="font-body-example">
+                    Learn new words every day. Build your vocabulary, practice with examples, and improve your English step by step.
+                </p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>6. Wireframes – Home Page</h2>
+            <p>Below are layout sketches for the home page in mobile and desktop views. Boxes represent content blocks and their relative positions.</p>
+
+            <div class="wireframes">
+
+
+                <div class="wireframe-container">
+                    <p>📱 Mobile View</p>
+                    <div class="wf-mobile">
+                        <div class="wf-bar">☰ ENGLISH SPARK</div>
+                        <div class="wf-hero">Hero Image + CTA Button</div>
+                        <div class="wf-block">Welcome / Site Intro Text</div>
+                        <div class="wf-section-label">— Word of the Day —</div>
+                        <div class="wf-block" style="height:50px;">Word Card (modal)</div>
+                        <div class="wf-section-label">— Featured Vocabulary —</div>
+                        <div class="wf-grid">
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                        </div>
+                        <div class="wf-footer">Footer: Contact | Social | ©</div>
+                    </div>
+                </div>
+
+
+                <div class="wireframe-container">
+                    <p>🖥️ Desktop View</p>
+                    <div class="wf-desktop">
+                        <div class="wf-bar">ENGLISH SPARK &nbsp;&nbsp;&nbsp; Home &nbsp; Vocabulary &nbsp; Resources &nbsp; Contact</div>
+                        <div class="wf-hero-desktop">Hero Image + CTA Button</div>
+                        <div class="wf-block" style="margin: 0.4rem;">Welcome / Site Intro Text</div>
+                        <div class="wf-section-label">— Word of the Day + Featured Vocabulary (side by side) —</div>
+                        <div style="display:grid; grid-template-columns: 1fr 2fr; gap:0.3rem; padding:0.4rem;">
+                            <div class="wf-grid-item" style="height:70px;">Word of the Day Card</div>
+                            <div class="wf-grid-item" style="height:70px;">Filter Bar + Search</div>
+                        </div>
+                        <div class="wf-grid-3">
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                            <div class="wf-grid-item">Word Card</div>
+                        </div>
+                        <div class="wf-footer">Footer: Contact | Social Media Links | © Gabriel Alba</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Pages Overview</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>File Name</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Home</td>
+                        <td>index.html</td>
+                        <td>Welcome page, word of the day, featured vocabulary cards, intro to the site</td>
+                    </tr>
+                    <tr>
+                        <td>Vocabulary</td>
+                        <td>vocabulary.html</td>
+                        <td>Full vocabulary list loaded from JSON, filter by difficulty, modal word details, save favorites</td>
+                    </tr>
+                    <tr>
+                        <td>Resources</td>
+                        <td>resources.html</td>
+                        <td>Grammar tips, learning strategies, contact/suggestion form</td>
+                    </tr>
+                    <tr>
+                        <td>Form Confirmation</td>
+                        <td>thankyou.html</td>
+                        <td>Displays submitted form data (does not count toward 3-page requirement)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>WDD 231 – Individual Project Site Plan &nbsp;|&nbsp; <span>Gabriel Alba</span> &nbsp;|&nbsp; &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
