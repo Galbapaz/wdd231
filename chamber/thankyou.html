@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Cruz Chamber of Commerce | Thank You</title>
+    <meta name="description" content="Thank you for applying to the Santa Cruz Chamber of Commerce.">
+    <meta name="author" content="Gabriel Alba">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.webp" alt="Santa Cruz Chamber of Commerce Logo" width="80" height="80">
+                <div class="logo-text">
+                    <p class="site-name">Santa Cruz Chamber of Commerce</p>
+                    <p>Connecting Local Businesses</p>
+                </div>
+            </div>
+            <nav>
+                <button id="menu" aria-label="Open navigation menu"></button>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="thankyou-section">
+
+            <div class="thankyou-icon">🎉</div>
+
+            <h1>Thank You for Applying!</h1>
+
+            <p class="thankyou-subtitle">
+                We have received your membership application and will be in touch soon.
+                Here is a summary of the information you submitted:
+            </p>
+
+            <div class="submission-summary">
+
+                <div class="summary-item">
+                    <span class="summary-label">First Name</span>
+                    <span class="summary-value" id="display-firstName"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-label">Last Name</span>
+                    <span class="summary-value" id="display-lastName"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-label">Email Address</span>
+                    <span class="summary-value" id="display-email"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-label">Mobile Phone</span>
+                    <span class="summary-value" id="display-phone"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-label">Business Name</span>
+                    <span class="summary-value" id="display-orgName"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-label">Date Submitted</span>
+                    <span class="summary-value" id="display-timestamp"></span>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-home-btn">← Back to Home</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-info">
+                <h2>Santa Cruz Chamber of Commerce</h2>
+                <p>Av. Cristo Redentor</p>
+                <p>Santa Cruz de la Sierra, Bolivia</p>
+                <p>Email: info@santacruzchamber.org</p>
+                <p>Phone: +591 3 1234567</p>
+            </section>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/facebook.webp" alt="Facebook Icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/twitter.webp" alt="Twitter Icon">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.webp" alt="LinkedIn Icon">
+                </a>
+            </div>
+            <div class="footer-dev">
+                <p>WDD 231 Chamber Project</p>
+                <p>Gabriel Alba</p>
+                <p>&copy; <span id="year"></span> Santa Cruz Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
