@@ -1,10 +1,12 @@
 
+
 .join-layout {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 1rem;
 }
+
 
 .form-section {
     background-color: #ffffff;
@@ -159,9 +161,9 @@ form input[type="submit"]:hover {
     border-left: 5px solid #4caf50;
 }
 .np-card h3 { color: #2e7d32; }
-.np-card .price { color: #388e3c; }
+.np-card .price { color: #1b5e20; }
 .np-card .info-link {
-    background-color: #4caf50;
+    background-color: #2e7d32;
     color: #fff;
 }
 .np-card .info-link:hover {
@@ -172,14 +174,14 @@ form input[type="submit"]:hover {
     background-color: #fbe9e7;
     border-left: 5px solid #bf6f3a;
 }
-.bronze-card h3 { color: #bf6f3a; }
-.bronze-card .price { color: #a0522d; }
+.bronze-card h3 { color: #7b3a10; }
+.bronze-card .price { color: #7b3a10; }
 .bronze-card .info-link {
-    background-color: #bf6f3a;
+    background-color: #7b3a10;
     color: #fff;
 }
 .bronze-card .info-link:hover {
-    background-color: #a0522d;
+    background-color: #5a2a0a;
 }
 
 .silver-card {
@@ -189,19 +191,19 @@ form input[type="submit"]:hover {
 .silver-card h3 { color: #546e7a; }
 .silver-card .price { color: #546e7a; }
 .silver-card .info-link {
-    background-color: #78909c;
+    background-color: #37474f;
     color: #fff;
 }
 .silver-card .info-link:hover {
-    background-color: #546e7a;
+    background-color: #263238;
 }
 
 .gold-card {
     background-color: #fff8e1;
     border-left: 5px solid #f4b400;
 }
-.gold-card h3 { color: #b8860b; }
-.gold-card .price { color: #b8860b; }
+.gold-card h3 { color: #7a5200; }
+.gold-card .price { color: #7a5200; }
 .gold-card .info-link {
     background-color: #f4b400;
     color: #000;
@@ -264,7 +266,6 @@ dialog::backdrop {
 .close-modal:hover {
     color: #0b3d62;
 }
-
 
 .thankyou-section {
     max-width: 600px;
@@ -340,6 +341,7 @@ dialog::backdrop {
 .back-home-btn:hover {
     background-color: #14558a;
 }
+
 
 @media screen and (min-width: 768px) {
 
