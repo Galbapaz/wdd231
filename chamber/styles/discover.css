@@ -1,0 +1,202 @@
+/* =========================================
+   VISITOR MESSAGE
+========================================= */
+
+.visitor-message {
+    background-color: #0b3d62;
+    color: #ffffff;
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   CARDS – BASE STYLES
+========================================= */
+
+.place-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "description"
+        "location"
+        "btn";
+}
+
+.place-card h2 {
+    grid-area: name;
+    background-color: #0b3d62;
+    color: #ffffff;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.place-card figure {
+    grid-area: photo;
+    margin: 0;
+    overflow: hidden;
+}
+
+.place-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: none; /* no hover on mobile */
+}
+
+.place-card address {
+    grid-area: location;
+    padding: 0.5rem 1rem;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+.place-card p {
+    grid-area: description;
+    padding: 0.8rem 1rem 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.place-card button {
+    grid-area: btn;
+    margin: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #0b3d62;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: start;
+}
+
+.place-card button:hover {
+    background-color: #14558a;
+}
+
+/* =========================================
+   SMALL SCREEN GRID (320px – 640px)
+   Single column, all cards stacked
+========================================= */
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "place1"
+        "place2"
+        "place3"
+        "place4"
+        "place5"
+        "place6"
+        "place7"
+        "place8";
+}
+
+.place-card:nth-child(1) { grid-area: place1; }
+.place-card:nth-child(2) { grid-area: place2; }
+.place-card:nth-child(3) { grid-area: place3; }
+.place-card:nth-child(4) { grid-area: place4; }
+.place-card:nth-child(5) { grid-area: place5; }
+.place-card:nth-child(6) { grid-area: place6; }
+.place-card:nth-child(7) { grid-area: place7; }
+.place-card:nth-child(8) { grid-area: place8; }
+
+/* =========================================
+   MEDIUM SCREEN GRID (641px – 1024px)
+   Two columns, varied layout
+========================================= */
+
+@media screen and (min-width: 641px) {
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "place1 place1"
+            "place2 place3"
+            "place4 place5"
+            "place6 place6"
+            "place7 place8";
+    }
+
+    /* Wider cards get a side-by-side inner layout */
+    .place-card:nth-child(1),
+    .place-card:nth-child(6) {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photo  name"
+            "photo  description"
+            "photo  location"
+            "photo  btn";
+    }
+
+    .place-card:nth-child(1) figure img,
+    .place-card:nth-child(6) figure img {
+        width: 300px;
+        height: 100%;
+    }
+
+    /* Enable hover effect on medium+ screens */
+    .place-card figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .place-card figure img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+}
+
+/* =========================================
+   LARGE SCREEN GRID (1025px and above)
+   Two columns, more complex arrangement
+========================================= */
+
+@media screen and (min-width: 1025px) {
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "place1 place2"
+            "place3 place2"
+            "place3 place4"
+            "place5 place4"
+            "place5 place6"
+            "place7 place8";
+    }
+
+    /* Tall spanning cards get vertical layout adjustment */
+    .place-card:nth-child(2),
+    .place-card:nth-child(3),
+    .place-card:nth-child(4),
+    .place-card:nth-child(5) {
+        grid-template-areas:
+            "name"
+            "photo"
+            "description"
+            "location"
+            "btn";
+    }
+
+    .place-card figure img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+}
