@@ -1,6 +1,6 @@
 import { places } from '../data/places.mjs';
 
-// ── VISITOR MESSAGE (localStorage) ──────────────────────────────
+
 const visitorMessage = document.querySelector('#visitor-message');
 const lastVisit = localStorage.getItem('lastVisit');
 const now = Date.now();
@@ -20,7 +20,7 @@ if (!lastVisit) {
 
 localStorage.setItem('lastVisit', now);
 
-// ── BUILD CARDS ──────────────────────────────────────────────────
+
 const grid = document.querySelector('#discover-grid');
 
 places.forEach((place, index) => {

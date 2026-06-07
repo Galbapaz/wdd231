@@ -1,6 +1,4 @@
-/* =========================================
-   VISITOR MESSAGE
-========================================= */
+
 
 .visitor-message {
     background-color: #0b3d62;
@@ -12,10 +10,6 @@
     font-size: 0.95rem;
 }
 
-/* =========================================
-   CARDS – SMALL SCREEN (stacked layout)
-   Photo on top, content below
-========================================= */
 
 .place-card {
     background-color: #ffffff;
@@ -91,10 +85,7 @@
     background-color: #14558a;
 }
 
-/* =========================================
-   SMALL SCREEN GRID (up to 640px)
-   Single column, all 8 cards stacked
-========================================= */
+
 
 .discover-grid {
     display: grid;
@@ -119,11 +110,7 @@
 .place-card:nth-child(7) { grid-area: place7; }
 .place-card:nth-child(8) { grid-area: place8; }
 
-/* =========================================
-   MEDIUM SCREEN (641px – 1024px)
-   Single column, ALL cards side-by-side layout
-   Image left, content right — like the example
-========================================= */
+
 
 @media screen and (min-width: 641px) {
 
@@ -140,7 +127,7 @@
             "place8";
     }
 
-    /* ALL cards become side-by-side */
+
     .place-card {
         grid-template-columns: 280px 1fr;
         grid-template-areas:
@@ -170,11 +157,7 @@
 
 }
 
-/* =========================================
-   LARGE SCREEN (1025px and above)
-   Two columns, varied grid-template-areas layout
-   This is NOT just adding columns — areas are rearranged
-========================================= */
+
 
 @media screen and (min-width: 1025px) {
 
@@ -187,7 +170,7 @@
             "place7 place8";
     }
 
-    /* All cards keep side-by-side layout */
+ 
     .place-card {
         grid-template-columns: 220px 1fr;
         grid-template-areas:
