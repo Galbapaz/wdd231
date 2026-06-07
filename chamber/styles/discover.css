@@ -13,7 +13,8 @@
 }
 
 /* =========================================
-   CARDS – BASE STYLES
+   CARDS – SMALL SCREEN (stacked layout)
+   Photo on top, content below
 ========================================= */
 
 .place-card {
@@ -43,16 +44,24 @@
     grid-area: photo;
     margin: 0;
     overflow: hidden;
+    height: 200px;
 }
 
 .place-card figure img {
     width: 100%;
-    height: 200px;
-    max-height: 200px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: none; /* no hover on mobile */
+    transition: none;
+}
+
+.place-card p {
+    grid-area: description;
+    padding: 0.8rem 1rem 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
 }
 
 .place-card address {
@@ -62,14 +71,6 @@
     font-size: 0.85rem;
     color: #555;
     border-top: 1px solid #eee;
-}
-
-.place-card p {
-    grid-area: description;
-    padding: 0.8rem 1rem 0;
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.6;
 }
 
 .place-card button {
@@ -91,8 +92,8 @@
 }
 
 /* =========================================
-   SMALL SCREEN GRID (320px – 640px)
-   Single column, all cards stacked
+   SMALL SCREEN GRID (up to 640px)
+   Single column, all 8 cards stacked
 ========================================= */
 
 .discover-grid {
@@ -119,26 +120,29 @@
 .place-card:nth-child(8) { grid-area: place8; }
 
 /* =========================================
-   MEDIUM SCREEN GRID (641px – 1024px)
-   Two columns, varied layout
+   MEDIUM SCREEN (641px – 1024px)
+   Single column, ALL cards side-by-side layout
+   Image left, content right — like the example
 ========================================= */
 
 @media screen and (min-width: 641px) {
 
     .discover-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "place1 place1"
-            "place2 place3"
-            "place4 place5"
-            "place6 place6"
-            "place7 place8";
+            "place1"
+            "place2"
+            "place3"
+            "place4"
+            "place5"
+            "place6"
+            "place7"
+            "place8";
     }
 
-    /* Wider cards get a side-by-side inner layout */
-    .place-card:nth-child(1),
-    .place-card:nth-child(6) {
-        grid-template-columns: 300px 1fr;
+    /* ALL cards become side-by-side */
+    .place-card {
+        grid-template-columns: 280px 1fr;
         grid-template-areas:
             "photo  name"
             "photo  description"
@@ -146,17 +150,16 @@
             "photo  btn";
     }
 
-    .place-card:nth-child(1) figure img,
-    .place-card:nth-child(6) figure img {
-        width: 300px;
+    .place-card figure {
         height: 100%;
-        max-height: 260px;
-        object-fit: cover;
-        object-position: center;
+        min-height: 200px;
     }
 
-    /* Enable hover effect on medium+ screens */
     .place-card figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
@@ -168,8 +171,9 @@
 }
 
 /* =========================================
-   LARGE SCREEN GRID (1025px and above)
-   Two columns, more complex arrangement
+   LARGE SCREEN (1025px and above)
+   Two columns, varied grid-template-areas layout
+   This is NOT just adding columns — areas are rearranged
 ========================================= */
 
 @media screen and (min-width: 1025px) {
@@ -178,32 +182,24 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "place1 place2"
-            "place3 place2"
             "place3 place4"
-            "place5 place4"
             "place5 place6"
             "place7 place8";
     }
 
-    /* Tall spanning cards get vertical layout adjustment */
-    .place-card:nth-child(2),
-    .place-card:nth-child(3),
-    .place-card:nth-child(4),
-    .place-card:nth-child(5) {
+    /* All cards keep side-by-side layout */
+    .place-card {
+        grid-template-columns: 220px 1fr;
         grid-template-areas:
-            "name"
-            "photo"
-            "description"
-            "location"
-            "btn";
+            "photo  name"
+            "photo  description"
+            "photo  location"
+            "photo  btn";
     }
 
-    .place-card figure img {
-        width: 100%;
-        height: 200px;
-        max-height: 200px;
-        object-fit: cover;
-        object-position: center;
+    .place-card figure {
+        height: 100%;
+        min-height: 180px;
     }
 
 }
