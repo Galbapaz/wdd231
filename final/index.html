@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/main.js" type="module" defer></script>
+    <script src="scripts/main.js" type="module"></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <img src="images/logo.png"
+                <img src="images/logo.webp"
                     alt="English Spark Logo"
                     width="50"
                     height="50">
@@ -91,8 +91,7 @@
                     click on any word card to see full details including pronunciation tips
                     and example sentences.
                 </p>
-                <a href="vocabulary.html" class="btn-primary mt-1"
-                    style="display:inline-block; margin-top: 1rem;">
+                <a href="vocabulary.html" class="btn-primary btn-inline mt-1">
                     Start Learning
                 </a>
             </div>
@@ -154,14 +153,14 @@
     <dialog id="word-modal">
         <button class="modal-close" aria-label="Close modal">✖</button>
         <p class="modal-label">Word</p>
-        <h2 id="modal-word"></h2>
+        <h2 id="modal-word">Word</h2>
         <p class="modal-label">Pronunciation</p>
         <p id="modal-pronunciation"></p>
         <p class="modal-label">Definition</p>
         <p id="modal-definition"></p>
         <p class="modal-label">Example</p>
-        <p id="modal-example" style="font-style: italic;"></p>
-        <div id="modal-tags" class="tags" style="margin-top: 0.8rem;"></div>
+        <p id="modal-example" class="modal-example"></p>
+        <div id="modal-tags" class="tags modal-tags"></div>
     </dialog>
 
 </body>
