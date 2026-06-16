@@ -1,0 +1,126 @@
+
+
+@media screen and (min-width: 768px) {
+
+    
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-top: 0;
+    }
+
+    .navigation li {
+        border-top: none;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.95rem;
+    }
+
+    .navigation a:hover {
+        background-color: #245280;
+    }
+
+    .navigation .active {
+        background-color: #245280;
+        color: #e8a020;
+    }
+
+    
+    .hero img {
+        height: 420px;
+    }
+
+    .hero-content {
+        padding: 2rem 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+        max-width: 600px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+
+    
+    .home-intro {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        margin-bottom: 2rem;
+    }
+
+    .words-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .filter-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filter-bar select,
+    .filter-bar input {
+        flex: 1;
+    }
+
+    .vocab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .resources-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+   
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        text-align: left;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .words-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vocab-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+}
