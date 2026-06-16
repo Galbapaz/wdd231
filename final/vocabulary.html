@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>English Spark | Vocabulary Practice</title>
+
+    <meta name="description"
+        content="Practice English vocabulary with interactive word cards. Filter by difficulty, save favorites, and learn with definitions and examples.">
+
+    <meta name="author" content="Gabriel Alba">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="English Spark | Vocabulary Practice">
+    <meta property="og:description"
+        content="Filter, explore, and save English vocabulary words. Free for all learners.">
+    <meta property="og:image" content="https://galbapaz.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://galbapaz.github.io/wdd231/final/vocabulary.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/vocabulary.js" type="module" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.webp"
+                    alt="English Spark Logo"
+                    width="50"
+                    height="50">
+                <div class="logo-text">
+                    <p class="site-name">English Spark</p>
+                    <p>Learn English Every Day</p>
+                </div>
+            </div>
+            <nav>
+                <button id="menu" aria-label="Open navigation menu"></button>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vocabulary.html" class="active">Vocabulary</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <h1>Vocabulary Practice</h1>
+        <p class="page-subtitle">
+            Click any word card to see full details. Save your favorites with ⭐
+        </p>
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="🔍 Search a word..."
+                aria-label="Search vocabulary words">
+
+            <select id="difficulty-filter" aria-label="Filter by difficulty">
+                <option value="all">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <select id="category-filter" aria-label="Filter by category">
+                <option value="all">All Categories</option>
+                <option value="Academic">Academic</option>
+                <option value="Everyday">Everyday</option>
+                <option value="Emotions">Emotions</option>
+                <option value="Character">Character</option>
+                <option value="Business">Business</option>
+                <option value="Communication">Communication</option>
+            </select>
+
+            <button id="clear-filters" class="btn-secondary">
+                Clear Filters
+            </button>
+
+        </div>
+
+        <!-- FAVORITES TOGGLE -->
+        <div class="favorites-bar">
+            <button id="show-favorites" class="btn-primary">
+                ⭐ Show Favorites
+            </button>
+            <button id="clear-favorites" class="btn-secondary">
+                🗑️ Clear Favorites
+            </button>
+            <span id="results-count" class="results-count"></span>
+        </div>
+
+        <!-- WORDS GRID -->
+        <div id="vocab-container" class="words-grid vocab-grid">
+            <!-- Injected by vocabulary.js -->
+        </div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <p id="no-results" class="no-results" style="display:none;">
+            No words found. Try a different search or filter.
+        </p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-info">
+                <h2>English Spark</h2>
+                <p>A free English learning resource</p>
+                <p>Created by Gabriel Alba</p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="vocabulary.html">Vocabulary</a></p>
+                <p><a href="resources.html">Resources</a></p>
+            </div>
+
+            <div class="footer-dev">
+                <h2>Project Info</h2>
+                <p>WDD 231 Individual Project</p>
+                <p>Gabriel Alba</p>
+                <p>&copy; <span id="year"></span> English Spark</p>
+                <p id="lastModified"></p>
+                <p><a href="#" id="video-link" target="_blank">📹 Demo Video</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- WORD DETAIL MODAL -->
+    <dialog id="word-modal">
+        <button class="modal-close" aria-label="Close modal">✖</button>
+
+        <p class="modal-label">Word</p>
+        <h2 id="modal-word"></h2>
+
+        <p class="modal-label">Pronunciation</p>
+        <p id="modal-pronunciation"></p>
+
+        <p class="modal-label">Definition</p>
+        <p id="modal-definition"></p>
+
+        <p class="modal-label">Example Sentence</p>
+        <p id="modal-example" style="font-style: italic;"></p>
+
+        <div id="modal-tags" class="tags" style="margin-top: 0.8rem;"></div>
+
+        <button id="modal-favorite-btn" class="btn-secondary"
+            style="margin-top: 1.2rem;">
+            ⭐ Save to Favorites
+        </button>
+    </dialog>
+
+</body>
+</html>
