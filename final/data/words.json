@@ -1,0 +1,162 @@
+[
+    {
+        "word": "Ambiguous",
+        "definition": "Having more than one possible meaning; unclear or uncertain.",
+        "example": "The instructions were ambiguous, so nobody knew what to do.",
+        "difficulty": "intermediate",
+        "category": "Academic",
+        "pronunciation": "am-BIG-yoo-us"
+    },
+    {
+        "word": "Benevolent",
+        "definition": "Kind, generous, and caring about others.",
+        "example": "The benevolent teacher always stayed after class to help struggling students.",
+        "difficulty": "advanced",
+        "category": "Character",
+        "pronunciation": "beh-NEV-oh-lent"
+    },
+    {
+        "word": "Cautious",
+        "definition": "Being careful to avoid danger or mistakes.",
+        "example": "Be cautious when crossing a busy street.",
+        "difficulty": "beginner",
+        "category": "Everyday",
+        "pronunciation": "KAW-shus"
+    },
+    {
+        "word": "Dedicate",
+        "definition": "To give time and energy to something important.",
+        "example": "She dedicated two hours every day to learning English.",
+        "difficulty": "beginner",
+        "category": "Everyday",
+        "pronunciation": "DED-ih-kayt"
+    },
+    {
+        "word": "Eloquent",
+        "definition": "Expressing ideas clearly and effectively in speech or writing.",
+        "example": "The president gave an eloquent speech that moved the entire audience.",
+        "difficulty": "advanced",
+        "category": "Academic",
+        "pronunciation": "EL-oh-kwent"
+    },
+    {
+        "word": "Flexible",
+        "definition": "Able to change or adapt easily to different situations.",
+        "example": "A flexible schedule allows you to study at any time.",
+        "difficulty": "beginner",
+        "category": "Everyday",
+        "pronunciation": "FLEX-ih-bul"
+    },
+    {
+        "word": "Grateful",
+        "definition": "Feeling or showing thanks for something received.",
+        "example": "I am grateful for all the support my teacher has given me.",
+        "difficulty": "beginner",
+        "category": "Emotions",
+        "pronunciation": "GRAYT-ful"
+    },
+    {
+        "word": "Hypothesis",
+        "definition": "A proposed explanation for something that has not yet been proven.",
+        "example": "The scientist tested her hypothesis with a series of experiments.",
+        "difficulty": "advanced",
+        "category": "Academic",
+        "pronunciation": "hy-POTH-eh-sis"
+    },
+    {
+        "word": "Imply",
+        "definition": "To suggest something without saying it directly.",
+        "example": "Her silence seemed to imply that she disagreed with the plan.",
+        "difficulty": "intermediate",
+        "category": "Communication",
+        "pronunciation": "im-PLY"
+    },
+    {
+        "word": "Justify",
+        "definition": "To give a good reason for something; to explain why something is right.",
+        "example": "Can you justify why you were late to the meeting?",
+        "difficulty": "intermediate",
+        "category": "Academic",
+        "pronunciation": "JUS-tih-fy"
+    },
+    {
+        "word": "Keen",
+        "definition": "Very interested in or enthusiastic about something.",
+        "example": "She is keen on learning new languages every year.",
+        "difficulty": "intermediate",
+        "category": "Everyday",
+        "pronunciation": "KEEN"
+    },
+    {
+        "word": "Linger",
+        "definition": "To stay somewhere longer than expected or necessary.",
+        "example": "The smell of fresh bread lingered in the kitchen all morning.",
+        "difficulty": "intermediate",
+        "category": "Everyday",
+        "pronunciation": "LING-er"
+    },
+    {
+        "word": "Meticulous",
+        "definition": "Paying great attention to every small detail; very careful.",
+        "example": "He was meticulous about checking his essay for grammar mistakes.",
+        "difficulty": "advanced",
+        "category": "Character",
+        "pronunciation": "meh-TIK-yoo-lus"
+    },
+    {
+        "word": "Negotiate",
+        "definition": "To discuss something in order to reach an agreement.",
+        "example": "The workers negotiated better working conditions with the company.",
+        "difficulty": "intermediate",
+        "category": "Business",
+        "pronunciation": "neh-GOH-shee-ayt"
+    },
+    {
+        "word": "Optimistic",
+        "definition": "Hopeful and confident about the future.",
+        "example": "Despite the difficulties, she remained optimistic about passing the exam.",
+        "difficulty": "beginner",
+        "category": "Emotions",
+        "pronunciation": "op-tih-MIS-tik"
+    },
+    {
+        "word": "Persist",
+        "definition": "To continue doing something even when it is difficult.",
+        "example": "If you persist in practicing English every day, you will improve quickly.",
+        "difficulty": "intermediate",
+        "category": "Character",
+        "pronunciation": "per-SIST"
+    },
+    {
+        "word": "Relevant",
+        "definition": "Closely connected to or important for the topic being discussed.",
+        "example": "Make sure your examples are relevant to the main argument.",
+        "difficulty": "intermediate",
+        "category": "Academic",
+        "pronunciation": "REL-eh-vant"
+    },
+    {
+        "word": "Sincere",
+        "definition": "Genuine and honest; meaning what you say.",
+        "example": "A sincere apology comes from the heart, not just from words.",
+        "difficulty": "beginner",
+        "category": "Character",
+        "pronunciation": "sin-SEER"
+    },
+    {
+        "word": "Thorough",
+        "definition": "Complete and careful, covering every detail.",
+        "example": "The teacher did a thorough review of all the grammar rules before the test.",
+        "difficulty": "intermediate",
+        "category": "Academic",
+        "pronunciation": "THUR-oh"
+    },
+    {
+        "word": "Vulnerable",
+        "definition": "At risk of being hurt, either physically or emotionally.",
+        "example": "Children are vulnerable to the influence of social media.",
+        "difficulty": "advanced",
+        "category": "Emotions",
+        "pronunciation": "VUL-ner-ah-bul"
+    }
+]
