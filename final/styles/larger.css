@@ -1,8 +1,11 @@
-
+/* =========================================
+   ENGLISH SPARK — larger.css
+   Desktop styles — min-width: 768px
+========================================= */
 
 @media screen and (min-width: 768px) {
 
-    
+    /* ── HEADER ── */
     #menu {
         display: none;
     }
@@ -33,7 +36,7 @@
         color: #e8a020;
     }
 
-    
+    /* ── HERO ── */
     .hero img {
         height: 420px;
     }
@@ -52,7 +55,7 @@
         max-width: 500px;
     }
 
-    
+    /* ── HOME PAGE LAYOUT ── */
     .home-intro {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -65,7 +68,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    
+    /* ── VOCABULARY PAGE ── */
     .filter-bar {
         flex-direction: row;
         align-items: center;
@@ -80,7 +83,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    
+    /* ── RESOURCES PAGE ── */
     .resources-layout {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -88,7 +91,7 @@
         align-items: start;
     }
 
-   
+    /* ── FOOTER ── */
     .footer-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -102,6 +105,9 @@
 
 }
 
+/* =========================================
+   LARGE DESKTOP — min-width: 1024px
+========================================= */
 
 @media screen and (min-width: 1024px) {
 
@@ -121,6 +127,21 @@
 
     .hero-content h1 {
         font-size: 2.8rem;
+    }
+
+}
+
+/* ── RESOURCES PAGE ── */
+@media screen and (min-width: 768px) {
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-aside {
+        margin-top: 0;
+        position: sticky;
+        top: 1rem;
     }
 
 }
