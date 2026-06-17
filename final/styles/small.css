@@ -484,11 +484,11 @@ footer {
     object-fit: contain;
 }
 
-.text-center { text-align: center; }
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
-.mb-1 { margin-bottom: 1rem; }
-.btn-inline { display: inline-block; margin-top: 1rem; }
+.align-center { text-align: center; }
+.margin-top-sm { margin-top: 1rem; }
+.margin-top-lg { margin-top: 2rem; }
+.margin-bottom-sm { margin-bottom: 1rem; }
+.btn-start { display: inline-block; margin-top: 1rem; }
 
 .modal-example { font-style: italic; }
 .modal-tags { margin-top: 0.8rem; }

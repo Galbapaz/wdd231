@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>English Spark | Resources & Grammar Tips</title>
+    <title>English Spark | Vocabulary Practice</title>
 
     <meta name="description"
-        content="Free English grammar tips, learning strategies, and a contact form to suggest new words and topics for English Spark.">
+        content="Practice English vocabulary with interactive word cards. Filter by difficulty, save favorites, and learn with definitions and examples.">
 
     <meta name="author" content="Gabriel Alba">
 
     <link rel="icon" href="images/favicon.ico">
 
-    <meta property="og:title" content="English Spark | Resources & Grammar Tips">
+    <meta property="og:title" content="English Spark | Vocabulary Practice">
     <meta property="og:description"
-        content="Explore grammar tips, learning strategies, and contact us to suggest new vocabulary topics.">
+        content="Filter, explore, and save English vocabulary words. Free for all learners.">
     <meta property="og:image" content="https://galbapaz.github.io/wdd231/final/images/hero.webp">
-    <meta property="og:url" content="https://galbapaz.github.io/wdd231/final/resources.html">
+    <meta property="og:url" content="https://galbapaz.github.io/wdd231/final/vocabulary.html">
     <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/resources.js" type="module" defer></script>
+    <script src="scripts/vocabulary.js" type="module" defer></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <img src="images/logo.webp"
+                <img src="images/logo.png"
                     alt="English Spark Logo"
                     width="50"
                     height="50">
@@ -52,8 +52,8 @@
                 <button id="menu" aria-label="Open navigation menu"></button>
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="vocabulary.html">Vocabulary</a></li>
-                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="vocabulary.html" class="active">Vocabulary</a></li>
+                    <li><a href="resources.html">Resources</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,196 +62,63 @@
     <!-- MAIN -->
     <main>
 
-        <h1>Resources & Grammar Tips</h1>
+        <h1>Vocabulary Practice</h1>
+        <p class="page-subtitle">
+            Click any word card to see full details. Save your favorites with ⭐
+        </p>
 
-        <div class="resources-layout">
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
 
-            <!-- LEFT: GRAMMAR TIPS + STRATEGIES -->
-            <div class="resources-content">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="🔍 Search a word..."
+                aria-label="Search vocabulary words">
 
-                <!-- GRAMMAR TIPS -->
-                <section class="card">
-                    <h2 class="section-title">📘 Grammar Tips</h2>
+            <select id="difficulty-filter" aria-label="Filter by difficulty">
+                <option value="all">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
 
-                    <div class="tip-card">
-                        <h3>1. Use Articles Correctly (a, an, the)</h3>
-                        <p>
-                            Use <strong>a</strong> before consonant sounds and
-                            <strong>an</strong> before vowel sounds.
-                            Use <strong>the</strong> when referring to something specific
-                            or already mentioned.
-                        </p>
-                        <p class="tip-example">
-                            ✅ "I saw <em>a</em> dog. <em>The</em> dog was friendly."
-                        </p>
-                    </div>
+            <select id="category-filter" aria-label="Filter by category">
+                <option value="all">All Categories</option>
+                <option value="Academic">Academic</option>
+                <option value="Everyday">Everyday</option>
+                <option value="Emotions">Emotions</option>
+                <option value="Character">Character</option>
+                <option value="Business">Business</option>
+                <option value="Communication">Communication</option>
+            </select>
 
-                    <div class="tip-card">
-                        <h3>2. Subject-Verb Agreement</h3>
-                        <p>
-                            The verb must agree with the subject in number.
-                            Singular subjects take singular verbs; plural subjects take plural verbs.
-                        </p>
-                        <p class="tip-example">
-                            ✅ "She <em>studies</em> every day." &nbsp;|&nbsp;
-                            "They <em>study</em> every day."
-                        </p>
-                    </div>
-
-                    <div class="tip-card">
-                        <h3>3. Tense Consistency</h3>
-                        <p>
-                            Stay in the same tense throughout a sentence or paragraph
-                            unless the meaning requires a change in time.
-                        </p>
-                        <p class="tip-example">
-                            ✅ "She opened the book and <em>started</em> reading." <br>
-                            ❌ "She opened the book and <em>starts</em> reading."
-                        </p>
-                    </div>
-
-                    <div class="tip-card">
-                        <h3>4. Prepositions of Time (in, on, at)</h3>
-                        <p>
-                            Use <strong>at</strong> for specific times, <strong>on</strong>
-                            for days and dates, and <strong>in</strong> for months,
-                            years, and longer periods.
-                        </p>
-                        <p class="tip-example">
-                            ✅ "at 5pm" &nbsp;|&nbsp; "on Monday" &nbsp;|&nbsp; "in January"
-                        </p>
-                    </div>
-
-                    <div class="tip-card">
-                        <h3>5. Countable vs Uncountable Nouns</h3>
-                        <p>
-                            Countable nouns can be pluralized (book → books).
-                            Uncountable nouns cannot (water, advice, information).
-                            Never use <em>a/an</em> with uncountable nouns.
-                        </p>
-                        <p class="tip-example">
-                            ✅ "Can you give me some <em>advice</em>?" <br>
-                            ❌ "Can you give me <em>an advice</em>?"
-                        </p>
-                    </div>
-
-                </section>
-
-                <!-- LEARNING STRATEGIES -->
-                <section class="card">
-                    <h2 class="section-title">🎯 Learning Strategies</h2>
-
-                    <div class="strategy-grid">
-
-                        <div class="strategy-card">
-                            <div class="strategy-icon">📓</div>
-                            <h3>Keep a Vocabulary Journal</h3>
-                            <p>Write 5 new words every day with their definitions
-                                and an original example sentence you create yourself.</p>
-                        </div>
-
-                        <div class="strategy-card">
-                            <div class="strategy-icon">🔁</div>
-                            <h3>Spaced Repetition</h3>
-                            <p>Review new words after 1 day, 3 days, 1 week,
-                                and 1 month. This technique dramatically improves
-                                long-term memory retention.</p>
-                        </div>
-
-                        <div class="strategy-card">
-                            <div class="strategy-icon">🎧</div>
-                            <h3>Listen and Repeat</h3>
-                            <p>Listen to English podcasts, songs, or videos and
-                                repeat what you hear out loud to improve pronunciation
-                                and natural fluency.</p>
-                        </div>
-
-                        <div class="strategy-card">
-                            <div class="strategy-icon">✍️</div>
-                            <h3>Write Every Day</h3>
-                            <p>Write a short paragraph in English every day using
-                                vocabulary words you have learned. Practice makes
-                                permanent.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-            <!-- RIGHT: CONTACT FORM -->
-            <aside class="form-aside">
-                <section class="card">
-                    <h2 class="section-title">💬 Suggest a Word</h2>
-                    <p style="margin-bottom: 1.2rem; color: #555; font-size: 0.9rem;">
-                        Is there a word or topic you want to learn?
-                        Send us a suggestion and we will add it to the vocabulary list!
-                    </p>
-
-                    <form method="get" action="thankyou.html">
-
-                        <label>
-                            Your Name
-                            <input
-                                type="text"
-                                name="name"
-                                title="Enter your name"
-                                autocomplete="given-name"
-                                required
-                                placeholder="Maria">
-                        </label>
-
-                        <label>
-                            Email Address
-                            <input
-                                type="email"
-                                name="email"
-                                title="Enter your email address"
-                                autocomplete="email"
-                                required
-                                placeholder="example@email.com">
-                        </label>
-
-                        <label>
-                            English Level
-                            <select name="level" title="Select your English level" required>
-                                <option value="" disabled selected>-- Select level --</option>
-                                <option value="beginner">Beginner</option>
-                                <option value="intermediate">Intermediate</option>
-                                <option value="advanced">Advanced</option>
-                            </select>
-                        </label>
-
-                        <label>
-                            Word or Topic Suggestion
-                            <input
-                                type="text"
-                                name="suggestion"
-                                title="Enter a word or topic you want to learn"
-                                required
-                                placeholder="e.g. Business English, Idioms...">
-                        </label>
-
-                        <label>
-                            Additional Comments
-                            <textarea
-                                name="comments"
-                                title="Any additional comments or context"
-                                placeholder="Tell us more about what you want to learn...">
-                            </textarea>
-                        </label>
-
-                        <!-- Hidden timestamp -->
-                        <input type="hidden" name="timestamp" id="timestamp">
-
-                        <input type="submit" value="Send Suggestion">
-
-                    </form>
-                </section>
-            </aside>
+            <button id="clear-filters" class="btn-secondary">
+                Clear Filters
+            </button>
 
         </div>
+
+        <!-- FAVORITES TOGGLE -->
+        <div class="favorites-bar">
+            <button id="show-favorites" class="btn-primary">
+                ⭐ Show Favorites
+            </button>
+            <button id="clear-favorites" class="btn-secondary">
+                🗑️ Clear Favorites
+            </button>
+            <span id="results-count" class="results-count"></span>
+        </div>
+
+        <!-- WORDS GRID -->
+        <div id="vocab-container" class="words-grid vocab-grid">
+            <!-- Injected by vocabulary.js -->
+        </div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <p id="no-results" class="no-results" style="display:none;">
+            No words found. Try a different search or filter.
+        </p>
 
     </main>
 
@@ -284,6 +151,30 @@
 
         </div>
     </footer>
+
+    <!-- WORD DETAIL MODAL -->
+    <dialog id="word-modal">
+        <button class="modal-close" aria-label="Close modal">✖</button>
+
+        <p class="modal-label">Word</p>
+        <h2 id="modal-word"></h2>
+
+        <p class="modal-label">Pronunciation</p>
+        <p id="modal-pronunciation"></p>
+
+        <p class="modal-label">Definition</p>
+        <p id="modal-definition"></p>
+
+        <p class="modal-label">Example Sentence</p>
+        <p id="modal-example" style="font-style: italic;"></p>
+
+        <div id="modal-tags" class="tags" style="margin-top: 0.8rem;"></div>
+
+        <button id="modal-favorite-btn" class="btn-secondary"
+            style="margin-top: 1.2rem;">
+            ⭐ Save to Favorites
+        </button>
+    </dialog>
 
 </body>
 </html>

@@ -35,10 +35,11 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <img src="images/logo.png"
+                <img src="images/logo.webp"
                     alt="English Spark Logo"
                     width="50"
                     height="50">
@@ -58,10 +59,10 @@
         </div>
     </header>
 
-
+    <!-- MAIN -->
     <main>
 
-    
+        <!-- HERO -->
         <section class="hero">
             <img src="images/hero.webp"
                 alt="Students studying English together"
@@ -75,7 +76,7 @@
             </div>
         </section>
 
-       
+        <!-- INTRO -->
         <section class="home-intro">
 
             <div class="intro-text card">
@@ -85,17 +86,17 @@
                     to improve their English vocabulary. Whether you are a beginner or an
                     advanced learner, you will find words that challenge and inspire you.
                 </p>
-                <p class="mt-1">
+                <p class="margin-top-sm">
                     Browse vocabulary by difficulty level, save your favorite words, and
                     click on any word card to see full details including pronunciation tips
                     and example sentences.
                 </p>
-                <a href="vocabulary.html" class="btn-primary btn-inline mt-1">
+                <a href="vocabulary.html" class="btn-primary btn-start margin-top-sm">
                     Start Learning
                 </a>
             </div>
 
-    
+            <!-- WORD OF THE DAY -->
             <div class="word-of-day card">
                 <h2 class="section-title">⭐ Word of the Day</h2>
                 <div id="word-of-day-container">
@@ -105,20 +106,20 @@
 
         </section>
 
-        
+        <!-- FEATURED VOCABULARY -->
         <section class="featured-section">
             <h2 class="section-title">Featured Vocabulary</h2>
             <div id="featured-words" class="words-grid">
-                
+                <!-- Injected by main.js -->
             </div>
-            <div class="text-center mt-2">
+            <div class="text-center margin-top-lg">
                 <a href="vocabulary.html" class="btn-secondary">See All Words →</a>
             </div>
         </section>
 
     </main>
 
-    
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
 
@@ -148,6 +149,7 @@
         </div>
     </footer>
 
+    <!-- WORD OF THE DAY MODAL -->
     <dialog id="word-modal">
         <button class="modal-close" aria-label="Close modal">✖</button>
         <p class="modal-label">Word</p>
