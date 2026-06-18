@@ -64,7 +64,7 @@
 
         <h1>Vocabulary Practice</h1>
         <p class="page-subtitle">
-            Click any word card to see full details. Save your favorites with ⭐
+            Click any word content-box to see full details. Save your favorites with ⭐
         </p>
 
         <!-- FILTER BAR -->
@@ -93,7 +93,7 @@
                 <option value="Communication">Communication</option>
             </select>
 
-            <button id="clear-filters" class="btn-secondary">
+            <button id="clear-filters" class="spark-btn-alt">
                 Clear Filters
             </button>
 
@@ -101,10 +101,10 @@
 
         <!-- FAVORITES TOGGLE -->
         <div class="favorites-bar">
-            <button id="show-favorites" class="btn-primary">
+            <button id="show-favorites" class="spark-btn-main">
                 ⭐ Show Favorites
             </button>
-            <button id="clear-favorites" class="btn-secondary">
+            <button id="clear-favorites" class="spark-btn-alt">
                 🗑️ Clear Favorites
             </button>
             <span id="results-count" class="results-count"></span>
@@ -154,23 +154,23 @@
 
     <!-- WORD DETAIL MODAL -->
     <dialog id="word-modal">
-        <button class="modal-close" aria-label="Close modal">✖</button>
+        <button class="dialog-close" aria-label="Close modal">✖</button>
 
-        <p class="modal-label">Word</p>
+        <p class="dialog-label">Word</p>
         <h2 id="modal-word"></h2>
 
-        <p class="modal-label">Pronunciation</p>
+        <p class="dialog-label">Pronunciation</p>
         <p id="modal-pronunciation"></p>
 
-        <p class="modal-label">Definition</p>
+        <p class="dialog-label">Definition</p>
         <p id="modal-definition"></p>
 
-        <p class="modal-label">Example Sentence</p>
-        <p id="modal-example" style="font-style: italic;"></p>
+        <p class="dialog-label">Example Sentence</p>
+        <p id="dialog-example" style="font-style: italic;"></p>
 
-        <div id="modal-tags" class="tags" style="margin-top: 0.8rem;"></div>
+        <div id="dialog-tags" class="tags" style="margin-top: 0.8rem;"></div>
 
-        <button id="modal-favorite-btn" class="btn-secondary"
+        <button id="modal-favorite-btn" class="spark-btn-alt"
             style="margin-top: 1.2rem;">
             ⭐ Save to Favorites
         </button>

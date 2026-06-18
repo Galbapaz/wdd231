@@ -79,25 +79,25 @@
         <!-- INTRO -->
         <section class="home-intro">
 
-            <div class="intro-text card">
+            <div class="intro-text content-box">
                 <h2>Welcome to English Spark</h2>
                 <p>
                     English Spark is a free learning resource designed for students who want
                     to improve their English vocabulary. Whether you are a beginner or an
                     advanced learner, you will find words that challenge and inspire you.
                 </p>
-                <p class="margin-top-sm">
+                <p class="gap-top-sm">
                     Browse vocabulary by difficulty level, save your favorite words, and
-                    click on any word card to see full details including pronunciation tips
+                    click on any word content-box to see full details including pronunciation tips
                     and example sentences.
                 </p>
-                <a href="vocabulary.html" class="btn-primary btn-start margin-top-sm">
+                <a href="vocabulary.html" class="spark-btn-main spark-btn-inline gap-top-sm">
                     Start Learning
                 </a>
             </div>
 
             <!-- WORD OF THE DAY -->
-            <div class="word-of-day card">
+            <div class="word-of-day content-box">
                 <h2 class="section-title">⭐ Word of the Day</h2>
                 <div id="word-of-day-container">
                     <p>Loading...</p>
@@ -112,8 +112,8 @@
             <div id="featured-words" class="words-grid">
                 <!-- Injected by main.js -->
             </div>
-            <div class="text-center margin-top-lg">
-                <a href="vocabulary.html" class="btn-secondary">See All Words →</a>
+            <div class="align-center gap-top-lg">
+                <a href="vocabulary.html" class="spark-btn-alt">See All Words →</a>
             </div>
         </section>
 
@@ -151,16 +151,16 @@
 
     <!-- WORD OF THE DAY MODAL -->
     <dialog id="word-modal">
-        <button class="modal-close" aria-label="Close modal">✖</button>
-        <p class="modal-label">Word</p>
+        <button class="dialog-close" aria-label="Close modal">✖</button>
+        <p class="dialog-label">Word</p>
         <h2 id="modal-word">Word</h2>
-        <p class="modal-label">Pronunciation</p>
+        <p class="dialog-label">Pronunciation</p>
         <p id="modal-pronunciation"></p>
-        <p class="modal-label">Definition</p>
+        <p class="dialog-label">Definition</p>
         <p id="modal-definition"></p>
-        <p class="modal-label">Example</p>
-        <p id="modal-example" class="modal-example"></p>
-        <div id="modal-tags" class="tags modal-tags"></div>
+        <p class="dialog-label">Example</p>
+        <p id="dialog-example" class="dialog-example"></p>
+        <div id="dialog-tags" class="tags dialog-tags"></div>
     </dialog>
 
 </body>
