@@ -9,9 +9,9 @@ export function openModal(word) {
     document.querySelector('#modal-pronunciation').textContent =
         `🔊 ${word.pronunciation}`;
     document.querySelector('#modal-definition').textContent = word.definition;
-    document.querySelector('#modal-example').textContent = `"${word.example}"`;
+    document.querySelector('#dialog-example').textContent = `"${word.example}"`;
 
-    const tagsContainer = document.querySelector('#modal-tags');
+    const tagsContainer = document.querySelector('#dialog-tags');
     tagsContainer.innerHTML = `
         <span class="tag tag-${word.difficulty}">${word.difficulty}</span>
         <span class="tag tag-category">${word.category}</span>
@@ -25,7 +25,7 @@ export function closeModal() {
     if (!modal) return;
 
     // Close button
-    const closeBtn = document.querySelector('.modal-close');
+    const closeBtn = document.querySelector('.dialog-close');
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             modal.close();
