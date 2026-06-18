@@ -527,3 +527,52 @@ footer {
     margin-top: 2rem;
     font-size: 1rem;
 }
+/* ── ATTRIBUTIONS PAGE ── */
+
+.attr-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.attr-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.attr-title {
+    font-weight: 700;
+    color: #1a3c5e;
+    margin-bottom: 0.3rem;
+}
+
+.attr-detail {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.3rem;
+}
+
+.attr-link {
+    font-size: 0.85rem;
+    color: #1a3c5e;
+    text-decoration: underline;
+}
+
+.attr-link:hover {
+    color: #e8a020;
+}
+
+.attr-link-inline {
+    color: #1a3c5e;
+    text-decoration: underline;
+}
+
+.attr-link-inline:hover {
+    color: #e8a020;
+}
+
+.tools-grid {
+    display: grid;
+    gap: 1rem;
+}
