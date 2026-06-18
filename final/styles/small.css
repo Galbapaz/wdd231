@@ -86,7 +86,7 @@ header {
 }
 
 .navigation .active {
-    background-color: #0d2238;
+    background-color: #245280;
     font-weight: 700;
     color: #e8a020;
 }
@@ -171,7 +171,7 @@ h3 {
     background-color: #c8880f;
 }
 
-.card {
+.content-box {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 1.5rem;
@@ -248,7 +248,7 @@ h3 {
     color: #1565c0;
 }
 
-.btn-primary {
+.spark-btn-main {
     display: inline-block;
     background-color: #1a3c5e;
     color: #ffffff;
@@ -261,11 +261,11 @@ h3 {
     border: none;
 }
 
-.btn-primary:hover {
+.spark-btn-main:hover {
     background-color: #245280;
 }
 
-.btn-secondary {
+.spark-btn-alt {
     display: inline-block;
     background-color: #e8a020;
     color: #000000;
@@ -278,7 +278,7 @@ h3 {
     border: none;
 }
 
-.btn-secondary:hover {
+.spark-btn-alt:hover {
     background-color: #c8880f;
 }
 
@@ -347,7 +347,7 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-close {
+.dialog-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -359,11 +359,11 @@ dialog::backdrop {
     transition: color 0.2s ease;
 }
 
-.modal-close:hover {
+.dialog-close:hover {
     color: #1a3c5e;
 }
 
-.modal-label {
+.dialog-label {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -485,10 +485,10 @@ footer {
 }
 
 .align-center { text-align: center; }
-.margin-top-sm { margin-top: 1rem; }
-.margin-top-lg { margin-top: 2rem; }
-.margin-bottom-sm { margin-bottom: 1rem; }
-.btn-start { display: inline-block; margin-top: 1rem; }
+.gap-top-sm { margin-top: 1rem; }
+.gap-top-lg { margin-top: 2rem; }
+.gap-bottom-sm { margin-bottom: 1rem; }
+.btn-inline { display: inline-block; margin-top: 1rem; }
 
 .modal-example { font-style: italic; }
 .modal-tags { margin-top: 0.8rem; }
@@ -513,7 +513,7 @@ footer {
     margin-left: auto;
 }
 
-.card-top {
+.content-box-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
