@@ -576,3 +576,10 @@ footer {
     display: grid;
     gap: 1rem;
 }
+
+/* ── FORM INTRO TEXT ── */
+.form-intro {
+    margin-bottom: 1.2rem;
+    color: #555;
+    font-size: 0.9rem;
+}
