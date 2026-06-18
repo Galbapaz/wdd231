@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/vocabulary.js" type="module" defer></script>
+    <script src="scripts/vocabulary.js" type="module"></script>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
 
         <h1>Vocabulary Practice</h1>
         <p class="page-subtitle">
-            Click any word content-box to see full details. Save your favorites with ⭐
+            Click any word card to see full details. Save your favorites with ⭐
         </p>
 
         <!-- FILTER BAR -->
@@ -93,7 +93,7 @@
                 <option value="Communication">Communication</option>
             </select>
 
-            <button id="clear-filters" class="spark-btn-alt">
+            <button id="clear-filters" class="btn-secondary">
                 Clear Filters
             </button>
 
@@ -101,10 +101,10 @@
 
         <!-- FAVORITES TOGGLE -->
         <div class="favorites-bar">
-            <button id="show-favorites" class="spark-btn-main">
+            <button id="show-favorites" class="btn-primary">
                 ⭐ Show Favorites
             </button>
-            <button id="clear-favorites" class="spark-btn-alt">
+            <button id="clear-favorites" class="btn-secondary">
                 🗑️ Clear Favorites
             </button>
             <span id="results-count" class="results-count"></span>
@@ -116,7 +116,7 @@
         </div>
 
         <!-- NO RESULTS MESSAGE -->
-        <p id="no-results" class="no-results" style="display:none;">
+        <p id="no-results" class="no-results hidden">
             No words found. Try a different search or filter.
         </p>
 
@@ -154,24 +154,23 @@
 
     <!-- WORD DETAIL MODAL -->
     <dialog id="word-modal">
-        <button class="dialog-close" aria-label="Close modal">✖</button>
+        <button class="modal-close" aria-label="Close modal">✖</button>
 
-        <p class="dialog-label">Word</p>
-        <h2 id="modal-word"></h2>
+        <p class="modal-label">Word</p>
+        <h2 id="modal-word">Word</h2>
 
-        <p class="dialog-label">Pronunciation</p>
+        <p class="modal-label">Pronunciation</p>
         <p id="modal-pronunciation"></p>
 
-        <p class="dialog-label">Definition</p>
+        <p class="modal-label">Definition</p>
         <p id="modal-definition"></p>
 
-        <p class="dialog-label">Example Sentence</p>
-        <p id="dialog-example" style="font-style: italic;"></p>
+        <p class="modal-label">Example Sentence</p>
+        <p id="modal-example" class="modal-example"></p>
 
-        <div id="dialog-tags" class="tags" style="margin-top: 0.8rem;"></div>
+        <div id="modal-tags" class="tags modal-tags"></div>
 
-        <button id="modal-favorite-btn" class="spark-btn-alt"
-            style="margin-top: 1.2rem;">
+        <button id="modal-favorite-btn" class="btn-secondary modal-favorite-btn">
             ⭐ Save to Favorites
         </button>
     </dialog>

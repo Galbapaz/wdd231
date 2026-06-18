@@ -37,18 +37,18 @@ function renderWords(words) {
     container.innerHTML = '';
 
     if (words.length === 0) {
-        noResults.style.display = 'block';
+        noResults.classList.remove('hidden');
         return;
     }
 
-    noResults.style.display = 'none';
+    noResults.classList.add('hidden');
 
     // Array method: forEach to build each card
     words.forEach(word => {
         const favorites = getFavorites();
         const isFavorite = favorites.includes(word.word);
 
-        // Template literal for content-box HTML
+        // Template literal for card HTML
         const card = document.createElement('article');
         card.classList.add('word-card');
         card.innerHTML = `
@@ -69,7 +69,7 @@ function renderWords(words) {
             </div>
         `;
 
-        // Click content-box to open modal
+        // Click card to open modal
         card.addEventListener('click', (e) => {
             if (e.target.closest('.btn-favorite')) return;
             currentWord = word;
