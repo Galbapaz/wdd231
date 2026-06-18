@@ -41,7 +41,7 @@ function displayWordOfDay(words) {
             <span class="tag tag-${word.difficulty}">${word.difficulty}</span>
             <span class="tag tag-category">${word.category}</span>
         </div>
-        <button class="btn-primary wod-btn" id="wod-details-btn">
+        <button class="spark-btn-main wod-btn" id="wod-details-btn">
             Full Details
         </button>
     `;

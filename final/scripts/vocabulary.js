@@ -48,7 +48,7 @@ function renderWords(words) {
         const favorites = getFavorites();
         const isFavorite = favorites.includes(word.word);
 
-        // Template literal for card HTML
+        // Template literal for content-box HTML
         const card = document.createElement('article');
         card.classList.add('word-card');
         card.innerHTML = `
@@ -69,7 +69,7 @@ function renderWords(words) {
             </div>
         `;
 
-        // Click card to open modal
+        // Click content-box to open modal
         card.addEventListener('click', (e) => {
             if (e.target.closest('.btn-favorite')) return;
             currentWord = word;
