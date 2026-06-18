@@ -1,19 +1,9 @@
-/* =========================================
-   ENGLISH SPARK — small.css
-   Mobile-first base styles
-   Colors: #1a3c5e (navy), #e8a020 (amber)
-   Fonts: Merriweather (headings), Open Sans (body)
-========================================= */
-
-/* ── BODY ── */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f0f6fb;
     color: #222222;
     line-height: 1.7;
 }
-
-/* ── HEADER ── */
 header {
     background-color: #1a3c5e;
     color: #ffffff;
