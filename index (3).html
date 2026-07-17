@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metacoxib® | Metapharma Laboratorios</title>
+<meta name="description" content="Metacoxib® (Celecoxib 200 mg) — Inhibidor selectivo COX-2. Alivio inteligente del dolor e inflamación. Metapharma Laboratorios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --navy-900:#081536;
+    --navy-800:#0B1F4D;
+    --navy-700:#132a66;
+    --navy-600:#1d3a86;
+    --red-600:#D31F2E;
+    --red-700:#A81723;
+    --red-050:#FBEAEA;
+    --white:#FFFFFF;
+    --off-white:#F6F7FB;
+    --gray-600:#5A6478;
+    --gray-300:#E3E6EE;
+    --gray-100:#F0F1F6;
+    --shadow-soft: 0 20px 50px -20px rgba(8,21,54,0.25);
+    --radius-lg: 22px;
+    --radius-md: 14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--navy-900);
+    background:var(--white);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Montserrat', sans-serif;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+  img{max-width:100%; display:block;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 30px;
+    border-radius:100px;
+    font-weight:700;
+    font-size:15px;
+    font-family:'Inter', sans-serif;
+    cursor:pointer;
+    border:none;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--red-600);
+    color:var(--white);
+    box-shadow:0 14px 30px -10px rgba(211,31,46,0.55);
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 18px 34px -8px rgba(211,31,46,0.6); }
+  .btn-ghost{
+    background:rgba(255,255,255,0.08);
+    color:var(--white);
+    border:1.5px solid rgba(255,255,255,0.35);
+  }
+  .btn-ghost:hover{ background:rgba(255,255,255,0.16); transform:translateY(-2px); }
+
+  /* ---------- Utility divider (EKG pulse line) ---------- */
+  .pulse-divider{
+    width:100%;
+    max-width:220px;
+    height:24px;
+    margin:22px auto;
+    opacity:0.85;
+  }
+  .pulse-divider path{
+    fill:none;
+    stroke:var(--red-600);
+    stroke-width:2.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  /* =========================================================
+     HEADER / NAV
+  ========================================================= */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:1000;
+    background:rgba(8,21,54,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 24px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{ width:38px; height:38px; flex-shrink:0; }
+  .brand-text{ line-height:1.05; }
+  .brand-text .name{
+    font-family:'Montserrat', sans-serif;
+    font-weight:800;
+    font-size:16.5px;
+    color:var(--white);
+    letter-spacing:0.01em;
+  }
+  .brand-text .sub{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:9px;
+    letter-spacing:0.22em;
+    color:var(--red-600);
+  }
+  nav.links{ display:flex; align-items:center; gap:34px; }
+  nav.links a{
+    color:rgba(255,255,255,0.82);
+    font-weight:600;
+    font-size:14.5px;
+    transition:color .2s ease;
+    position:relative;
+  }
+  nav.links a:hover{ color:var(--white); }
+  .nav-cta{ display:flex; align-items:center; gap:16px; }
+  .nav-cta .btn{ padding:11px 22px; font-size:13.5px; }
+  .burger{
+    display:none;
+    width:42px; height:42px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    color:var(--white);
+    font-size:18px;
+    cursor:pointer;
+    align-items:center; justify-content:center;
+  }
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    background:var(--navy-800);
+    padding:10px 24px 26px;
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{
+    color:rgba(255,255,255,0.88);
+    font-weight:600;
+    padding:13px 4px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:15px;
+  }
+  .mobile-menu .btn{ margin-top:16px; width:100%; }
+
+  /* =========================================================
+     HERO
+  ========================================================= */
+  .hero{
+    position:relative;
+    background:linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 62%, #060f2b 100%);
+    color:var(--white);
+    padding:150px 0 40px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-120px; right:-160px;
+    width:520px; height:520px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(211,31,46,0.28), transparent 68%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero-copy .eyebrow{ color:var(--red-600); background:rgba(211,31,46,0.12); padding:7px 14px; border-radius:100px; }
+  .hero-copy h1{
+    font-size:clamp(40px, 6vw, 66px);
+    font-weight:900;
+    margin-top:18px;
+    color:var(--white);
+  }
+  .hero-copy h1 span{ color:var(--red-600); }
+  .hero-copy .molecule{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:16px;
+    color:rgba(255,255,255,0.65);
+    margin-top:6px;
+  }
+  .hero-copy .headline{
+    font-size:clamp(19px, 2.4vw, 24px);
+    font-weight:700;
+    color:rgba(255,255,255,0.92);
+    margin-top:22px;
+    max-width:480px;
+    line-height:1.4;
+  }
+  .hero-actions{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+  .hero-badges{ display:flex; gap:14px; margin-top:36px; flex-wrap:wrap; }
+  .hero-badge{
+    display:flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    padding:11px 16px;
+    border-radius:100px;
+    font-size:13px;
+    font-weight:600;
+    color:rgba(255,255,255,0.85);
+  }
+  .hero-badge i{ color:var(--red-600); }
+
+  .hero-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:420px;
+  }
+  .figure-ring{
+    position:absolute;
+    width:380px; height:380px;
+    border-radius:50%;
+    border:1.5px dashed rgba(255,255,255,0.18);
+  }
+  .figure-ring.inner{ width:280px; height:280px; }
+  .runner{
+    position:relative;
+    font-size:210px;
+    color:rgba(255,255,255,0.94);
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,0.35));
+    z-index:2;
+  }
+  .runner .fa-person-running{ transform:scaleX(-1); }
+  .pain-point{
+    position:absolute;
+    width:26px; height:26px;
+    border-radius:50%;
+    background:var(--red-600);
+    box-shadow:0 0 0 0 rgba(211,31,46,0.6);
+    animation:pulseDot 2.2s infinite;
+    z-index:3;
+  }
+  .pain-point.p1{ top:16%; left:44%; }
+  .pain-point.p2{ top:52%; left:30%; }
+  .pain-point.p3{ top:75%; left:57%; }
+  @keyframes pulseDot{
+    0%{ box-shadow:0 0 0 0 rgba(211,31,46,0.55); }
+    70%{ box-shadow:0 0 0 16px rgba(211,31,46,0); }
+    100%{ box-shadow:0 0 0 0 rgba(211,31,46,0); }
+  }
+  .product-chip{
+    position:absolute;
+    bottom:6px; right:0;
+    background:var(--white);
+    color:var(--navy-900);
+    border-radius:16px;
+    padding:14px 18px;
+    display:flex; align-items:center; gap:12px;
+    box-shadow:0 20px 45px -12px rgba(0,0,0,0.45);
+    z-index:4;
+  }
+  .product-chip .box-icon{
+    width:42px; height:42px;
+    border-radius:10px;
+    background:linear-gradient(160deg, var(--navy-800), var(--navy-900));
+    display:flex; align-items:center; justify-content:center;
+    color:var(--white); font-size:16px;
+  }
+  .product-chip strong{ display:block; font-size:14px; font-family:'Montserrat',sans-serif; font-weight:800;}
+  .product-chip span{ display:block; font-size:11.5px; color:var(--gray-600); font-weight:600;}
+
+  .wave-bottom{ display:block; width:100%; line-height:0; margin-top:50px; position:relative; z-index:2; }
+  .wave-bottom svg{ width:100%; height:auto; display:block; }
+
+  /* =========================================================
+     SECTION HEADINGS (shared)
+  ========================================================= */
+  .section{ padding:96px 0; }
+  .section.tight{ padding:76px 0; }
+  .section-tag{
+    display:inline-flex; align-items:center; gap:9px;
+    color:var(--red-600); font-weight:700; font-size:12.5px;
+    letter-spacing:0.14em; text-transform:uppercase;
+  }
+  .section-tag i{ font-size:11px; }
+  .section-title{
+    font-size:clamp(28px, 3.6vw, 40px);
+    font-weight:800;
+    color:var(--navy-900);
+    margin-top:12px;
+    max-width:640px;
+  }
+  .section-lead{
+    color:var(--gray-600);
+    font-size:16.5px;
+    max-width:560px;
+    margin-top:14px;
+  }
+
+  /* =========================================================
+     QUE ES METACOXIB
+  ========================================================= */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:64px;
+    align-items:start;
+    margin-top:52px;
+  }
+  .about-card{
+    background:var(--off-white);
+    border-radius:var(--radius-lg);
+    padding:36px;
+    border:1px solid var(--gray-300);
+  }
+  .about-card .icon-badge{
+    width:52px; height:52px;
+    border-radius:14px;
+    background:var(--navy-800);
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px;
+    margin-bottom:18px;
+  }
+  .about-card p{ color:var(--gray-600); font-size:15.5px; }
+  .about-card p strong{ color:var(--navy-900); }
+
+  .indic-list{ margin-top:22px; display:flex; flex-direction:column; gap:4px; }
+  .indic-item{
+    display:flex; align-items:center; gap:14px;
+    padding:14px 4px;
+    border-bottom:1px dashed var(--gray-300);
+  }
+  .indic-item:last-child{ border-bottom:none; }
+  .indic-item .dot{
+    width:38px; height:38px; flex-shrink:0;
+    border-radius:50%;
+    background:var(--red-050);
+    color:var(--red-600);
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+  }
+  .indic-item span{ font-weight:600; font-size:15px; color:var(--navy-900); }
+
+  .caution-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-top:64px;
+  }
+  .caution-card{
+    border-radius:var(--radius-md);
+    padding:26px 28px;
+    border-left:4px solid var(--red-600);
+    background:var(--red-050);
+  }
+  .caution-card.warn{
+    border-left-color:var(--navy-700);
+    background:var(--gray-100);
+  }
+  .caution-card h4{
+    font-size:14px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--red-700); margin-bottom:14px; font-weight:800;
+  }
+  .caution-card.warn h4{ color:var(--navy-800); }
+  .caution-card ul{ display:flex; flex-direction:column; gap:10px; }
+  .caution-card li{
+    font-size:14.5px; color:var(--navy-900);
+    display:flex; gap:10px; align-items:flex-start;
+    line-height:1.5;
+  }
+  .caution-card li::before{
+    content:"";
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--red-600);
+    margin-top:8px;
+    flex-shrink:0;
+  }
+  .caution-card.warn li::before{ background:var(--navy-700); }
+
+  /* =========================================================
+     BENEFICIOS
+  ========================================================= */
+  .benefits-section{ background:var(--navy-900); color:var(--white); position:relative; overflow:hidden;}
+  .benefits-section::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size:26px 26px;
+    opacity:0.4;
+    pointer-events:none;
+  }
+  .benefits-section .section-tag{ color:var(--red-600); }
+  .benefits-section .section-title{ color:var(--white); }
+  .benefits-section .section-lead{ color:rgba(255,255,255,0.65); }
+  .benefits-grid{
+    position:relative; z-index:2;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+    margin-top:52px;
+  }
+  .benefit-card{
+    background:rgba(255,255,255,0.045);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:var(--radius-lg);
+    padding:32px 26px;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .benefit-card:hover{ transform:translateY(-6px); background:rgba(255,255,255,0.08); }
+  .benefit-card .b-icon{
+    width:54px; height:54px;
+    border-radius:14px;
+    background:linear-gradient(160deg, var(--red-600), var(--red-700));
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-size:21px;
+    margin-bottom:20px;
+  }
+  .benefit-card h3{ font-size:17.5px; font-weight:700; margin-bottom:8px; }
+  .benefit-card p{ font-size:14px; color:rgba(255,255,255,0.62); }
+  .benefit-card.span2{ grid-column:span 1; }
+  .benefits-footnote{
+    margin-top:26px; font-size:12.5px; color:rgba(255,255,255,0.42);
+    position:relative; z-index:2;
+  }
+
+  /* =========================================================
+     MODO DE USO
+  ========================================================= */
+  .use-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+    align-items:center;
+    margin-top:52px;
+  }
+  .capsule-visual{
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .capsule-circle{
+    width:270px; height:270px;
+    border-radius:50%;
+    background:var(--off-white);
+    border:2px dashed var(--gray-300);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .capsule-circle i{
+    font-size:96px;
+    background:linear-gradient(135deg, var(--red-600), var(--navy-800));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    transform:rotate(-40deg);
+  }
+  .use-detail-card{
+    background:var(--white);
+    border:1px solid var(--gray-300);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+    padding:34px;
+  }
+  .use-detail-card .rx-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--red-050); color:var(--red-700);
+    font-weight:700; font-size:13px;
+    padding:8px 14px; border-radius:100px;
+    margin-bottom:18px;
+  }
+  .use-detail-card h3{ font-size:22px; font-weight:800; margin-bottom:22px; }
+  .use-fact{ display:flex; gap:16px; padding:16px 0; border-top:1px solid var(--gray-300); }
+  .use-fact:first-of-type{ border-top:none; padding-top:0; }
+  .use-fact .icon{
+    width:42px; height:42px; flex-shrink:0; border-radius:11px;
+    background:var(--navy-800); color:var(--white);
+    display:flex; align-items:center; justify-content:center; font-size:16px;
+  }
+  .use-fact strong{ display:block; font-size:15px; margin-bottom:3px; }
+  .use-fact p{ font-size:14px; color:var(--gray-600); }
+
+  /* =========================================================
+     COMPROMISO
+  ========================================================= */
+  .commitment{
+    position:relative;
+    background:linear-gradient(150deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color:var(--white);
+    overflow:hidden;
+  }
+  .commitment .wave-top{ line-height:0; }
+  .commitment .wave-top svg{ width:100%; display:block; }
+  .commitment-inner{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:60px;
+    align-items:center;
+    padding:20px 0 90px;
+  }
+  .commitment-copy .section-tag{ color:var(--red-600); }
+  .commitment-copy h2{
+    font-size:clamp(30px, 4vw, 42px);
+    font-weight:800; margin-top:14px; color:var(--white);
+  }
+  .commitment-copy h2 span{ color:var(--red-600); }
+  .commitment-copy p{
+    margin-top:18px; color:rgba(255,255,255,0.72);
+    font-size:16px; max-width:480px;
+  }
+  .commitment-copy .pulse-divider{ margin-left:0; }
+  .commitment-copy .site-link{
+    margin-top:26px;
+    display:inline-flex; align-items:center; gap:10px;
+    font-weight:700; color:var(--white);
+    border-bottom:2px solid var(--red-600);
+    padding-bottom:4px;
+  }
+  .qr-box{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    padding:30px;
+    color:var(--navy-900);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);
+    text-align:center;
+    max-width:300px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .qr-box .tag{
+    display:inline-block;
+    font-weight:800; font-size:13px;
+    letter-spacing:0.02em;
+    margin-bottom:16px;
+    line-height:1.4;
+  }
+  .qr-box .tag .hl{ color:var(--red-600); }
+  .brand-visual{
+    width:180px; height:180px;
+    margin:0 auto 16px;
+    border-radius:16px;
+    background:linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .brand-visual::before{
+    content:"";
+    position:absolute;
+    top:-40px; right:-40px;
+    width:150px; height:150px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(211,31,46,0.35), transparent 70%);
+  }
+  .brand-visual-mark{
+    width:64px; height:64px;
+    position:relative;
+    z-index:2;
+  }
+  .brand-visual-mark svg{ width:100%; height:100%; }
+
+  .qr-box .socials{
+    display:flex; align-items:center; justify-content:center; gap:16px;
+    margin-top:8px;
+  }
+  .qr-box .socials a{
+    font-size:13px; font-weight:600; color:var(--gray-600);
+    display:flex; align-items:center; gap:6px;
+  }
+
+  /* =========================================================
+     FOOTER
+  ========================================================= */
+  footer{ background:#060f2b; color:rgba(255,255,255,0.65); padding:56px 0 26px; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.8fr 0.9fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(255,255,255,0.09);
+  }
+  .footer-brand .brand{ margin-bottom:14px; }
+  .footer-brand p{ font-size:14px; max-width:320px; color:rgba(255,255,255,0.5); }
+  .footer-col h5{
+    font-family:'Inter',sans-serif; font-size:12.5px; font-weight:700;
+    letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.85);
+    margin-bottom:16px;
+  }
+  .footer-col ul{ display:flex; flex-direction:column; gap:11px; }
+  .footer-col a{ font-size:14px; color:rgba(255,255,255,0.55); transition:color .2s ease; }
+  .footer-col a:hover{ color:var(--white); }
+  .footer-bottom{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:24px; flex-wrap:wrap; gap:10px;
+    font-size:12.5px; color:rgba(255,255,255,0.4);
+  }
+  .footer-bottom .disclaimer{
+    display:flex; align-items:center; gap:8px;
+    color:rgba(255,255,255,0.5);
+  }
+  .footer-bottom .disclaimer i{ color:var(--red-600); }
+
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
+  @media (max-width: 980px){
+    nav.links{ display:none; }
+    .nav-cta .btn{ display:none; }
+    .burger{ display:flex; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; min-height:340px; }
+    .runner{ font-size:150px; }
+    .about-grid{ grid-template-columns:1fr; gap:44px; }
+    .caution-row{ grid-template-columns:1fr; }
+    .benefits-grid{ grid-template-columns:repeat(2, 1fr); }
+    .use-grid{ grid-template-columns:1fr; }
+    .commitment-inner{ grid-template-columns:1fr; padding-bottom:60px; }
+    .qr-box{ margin-top:10px; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+    .footer-brand{ grid-column:1 / -1; }
+  }
+  @media (max-width: 600px){
+    .section{ padding:64px 0; }
+    .hero{ padding-top:120px; }
+    .benefits-grid{ grid-template-columns:1fr; }
+    .hero-actions{ flex-direction:column; align-items:stretch; }
+    .hero-badges{ flex-direction:column; }
+    .product-chip{ position:relative; bottom:auto; right:auto; margin-top:20px; }
+    .footer-grid{ grid-template-columns:1fr; }
+    .footer-bottom{ flex-direction:column; align-items:flex-start; }
+    .use-fact{ flex-direction:row; }
+  }
+
+  :focus-visible{ outline:2.5px solid var(--red-600); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header>
+  <div class="nav-wrap">
+    <a href="#inicio" class="brand">
+      <svg class="brand-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="44" height="44" rx="11" fill="#0B1F4D"/>
+        <path d="M9 32V13.5L22 24L35 13.5V32" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 13.5L16 20" stroke="#D31F2E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">METAPHARMA</span><br>
+        <span class="sub">LABORATORIOS</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#producto">Producto</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#modo-uso">Modo de uso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contacto" class="btn btn-primary"><i class="fa-solid fa-qrcode"></i> Conocer más</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio">Inicio</a>
+    <a href="#producto">Producto</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#modo-uso">Modo de uso</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn btn-primary">Conocer más</a>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><i class="fa-solid fa-dna"></i> Inhibidor selectivo COX-2</span>
+      <h1>Meta<span>coxib</span>®</h1>
+      <p class="molecule">Celecoxib · 200 mg</p>
+      <p class="headline">Alivio inteligente del dolor e inflamación.</p>
+      <div class="hero-actions">
+        <a href="#beneficios" class="btn btn-primary"><i class="fa-solid fa-heart-pulse"></i> Ver beneficios</a>
+        <a href="#modo-uso" class="btn btn-ghost"><i class="fa-solid fa-capsules"></i> Modo de uso</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge"><i class="fa-solid fa-file-prescription"></i> Venta bajo receta médica</span>
+        <span class="hero-badge"><i class="fa-solid fa-user-doctor"></i> Uso bajo supervisión médica</span>
+        <span class="hero-badge"><i class="fa-solid fa-box"></i> 30 cápsulas</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="figure-ring"></div>
+      <div class="figure-ring inner"></div>
+      <div class="runner"><i class="fa-solid fa-person-running"></i></div>
+      <span class="pain-point p1"></span>
+      <span class="pain-point p2"></span>
+      <span class="pain-point p3"></span>
+      <div class="product-chip">
+        <div class="box-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+        <div>
+          <strong>Metacoxib® 200mg</strong>
+          <span>30 cápsulas · Vía oral</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave-bottom">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <path d="M0,40 C320,90 720,0 1080,35 C1260,52 1360,45 1440,30 L1440,90 L0,90 Z" fill="#D31F2E" opacity="0.9"/>
+      <path d="M0,60 C300,100 760,20 1080,55 C1280,77 1380,65 1440,50 L1440,100 L0,100 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ========================= QUE ES METACOXIB ========================= -->
+<section class="section" id="producto">
+  <div class="container">
+    <span class="section-tag"><i class="fa-solid fa-circle-question"></i> ¿Qué es Metacoxib?</span>
+    <h2 class="section-title">Un AINE de última generación, diseñado para tratar el dolor con mayor precisión.</h2>
+
+    <div class="about-grid">
+      <div>
+        <div class="about-card">
+          <div class="icon-badge"><i class="fa-solid fa-atom"></i></div>
+          <p><strong>Metacoxib® (Celecoxib 200 mg)</strong> es un antiinflamatorio no esteroideo (AINE) de última generación que actúa inhibiendo selectivamente la enzima COX-2, responsable de la inflamación y el dolor.</p>
+        </div>
+
+        <div class="caution-row">
+          <div class="caution-card">
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> Contraindicaciones</h4>
+            <ul>
+              <li>Hipersensibilidad al celecoxib o a otros AINEs.</li>
+              <li>Embarazo (especialmente tercer trimestre).</li>
+              <li>Insuficiencia hepática severa.</li>
+              <li>Insuficiencia cardíaca descompensada.</li>
+            </ul>
+          </div>
+          <div class="caution-card warn">
+            <h4><i class="fa-solid fa-circle-info"></i> Advertencias</h4>
+            <ul>
+              <li>No exceder la dosis indicada.</li>
+              <li>Mantener fuera del alcance de los niños.</li>
+              <li>Conservar a temperatura inferior a 30°C en lugar seco.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size:19px; font-weight:800; margin-bottom:4px;">Indicaciones</h3>
+        <p style="color:var(--gray-600); font-size:14.5px;">Formulado para el manejo clínico de:</p>
+        <div class="indic-list">
+          <div class="indic-item"><span class="dot"><i class="fa-solid fa-bone"></i></span><span>Osteoartritis</span></div>
+          <div class="indic-item"><span class="dot"><i class="fa-solid fa-hand-dots"></i></span><span>Artritis reumatoide</span></div>
+          <div class="indic-item"><span class="dot"><i class="fa-solid fa-bolt"></i></span><span>Dolor agudo</span></div>
+          <div class="indic-item"><span class="dot"><i class="fa-solid fa-user-injured"></i></span><span>Dolor postoperatorio</span></div>
+          <div class="indic-item"><span class="dot"><i class="fa-solid fa-x-ray"></i></span><span>Espondilitis anquilosante</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= BENEFICIOS ========================= -->
+<section class="section benefits-section" id="beneficios">
+  <div class="container">
+    <span class="section-tag"><i class="fa-solid fa-star"></i> Beneficios</span>
+    <h2 class="section-title">Beneficios de Metacoxib®</h2>
+    <p class="section-lead">Cinco razones por las que profesionales de la salud confían en Metacoxib® para el manejo del dolor y la inflamación.</p>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="b-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Control eficaz</h3>
+        <p>Del dolor y la inflamación.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>Acción prolongada</h3>
+        <p>Con una sola dosis diaria.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <h3>Menor riesgo</h3>
+        <p>De efectos gastrointestinales*.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon"><i class="fa-solid fa-person-walking"></i></div>
+        <h3>Mayor movilidad</h3>
+        <p>Y calidad de vida para el paciente.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Excelente perfil</h3>
+        <p>De seguridad.</p>
+      </div>
+    </div>
+    <p class="benefits-footnote">* Comparado con antiinflamatorios no esteroideos (AINEs) no selectivos.</p>
+  </div>
+</section>
+
+<!-- ========================= MODO DE USO ========================= -->
+<section class="section" id="modo-uso">
+  <div class="container">
+    <span class="section-tag"><i class="fa-solid fa-capsules"></i> Modo de uso</span>
+    <h2 class="section-title">Simple, claro y siempre bajo supervisión médica.</h2>
+
+    <div class="use-grid">
+      <div class="capsule-visual">
+        <div class="capsule-circle">
+          <i class="fa-solid fa-capsules"></i>
+        </div>
+      </div>
+      <div class="use-detail-card">
+        <span class="rx-tag"><i class="fa-solid fa-file-prescription"></i> Siempre bajo prescripción médica</span>
+        <h3>Indicaciones de uso</h3>
+
+        <div class="use-fact">
+          <div class="icon"><i class="fa-solid fa-pills"></i></div>
+          <div>
+            <strong>Dosis recomendada</strong>
+            <p>1 cápsula (200 mg) al día, o según indicación médica.</p>
+          </div>
+        </div>
+        <div class="use-fact">
+          <div class="icon"><i class="fa-solid fa-route"></i></div>
+          <div>
+            <strong>Vía de administración</strong>
+            <p>Vía oral.</p>
+          </div>
+        </div>
+        <div class="use-fact">
+          <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <div>
+            <strong>Supervisión</strong>
+            <p>Uso exclusivo bajo prescripción y seguimiento médico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= COMPROMISO ========================= -->
+<section class="commitment" id="contacto">
+  <div class="wave-top">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,50 C320,0 760,80 1080,40 C1260,18 1360,28 1440,45 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+  <div class="container commitment-inner">
+    <div class="commitment-copy">
+      <span class="section-tag"><i class="fa-solid fa-shield"></i> Compromiso</span>
+      <h2>Compromiso <span>Metapharma</span></h2>
+      <p>En Metapharma Laboratorios, desarrollamos medicamentos con altos estándares de calidad, respaldados por la ciencia y comprometidos con el bienestar de las personas.</p>
+
+      <svg class="pulse-divider" viewBox="0 0 220 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 12 H60 L72 2 L84 22 L96 12 H130 L140 4 L150 20 L160 12 H220"/>
+      </svg>
+
+      <a href="https://www.metapharma.com.bo" class="site-link" target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe"></i> www.metapharma.com.bo
+      </a>
+    </div>
+
+    <div class="qr-box">
+      <span class="tag">CONOCE MÁS SOBRE <span class="hl">METACOXIB®</span></span>
+      <div class="brand-visual">
+        <div class="brand-visual-mark">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="11" fill="#D31F2E"/>
+            <path d="M9 32V13.5L22 24L35 13.5V32" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 13.5L16 20" stroke="#0B1F4D" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.metapharma.com.bo" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> metapharma.com.bo</a>
+        <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @metapharma.lab</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand">
+          <svg class="brand-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="11" fill="#D31F2E"/>
+            <path d="M9 32V13.5L22 24L35 13.5V32" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 13.5L16 20" stroke="#0B1F4D" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text">
+            <span class="name">METAPHARMA</span><br>
+            <span class="sub">LABORATORIOS</span>
+          </span>
+        </a>
+        <p>Innovación que mejora la calidad de vida. Desarrollamos medicamentos con altos estándares de calidad, respaldados por la ciencia.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#producto">Producto</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#modo-uso">Modo de uso</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="https://www.metapharma.com.bo" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>&nbsp; www.metapharma.com.bo</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i>&nbsp; @metapharma.lab</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Metapharma Laboratorios. Todos los derechos reservados.</span>
+      <span class="disclaimer"><i class="fa-solid fa-triangle-exclamation"></i> Venta bajo receta médica. Uso bajo supervisión médica.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    const icon = burgerBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      const icon = burgerBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+</script>
+</body>
+</html>
